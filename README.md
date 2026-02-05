@@ -6,6 +6,8 @@ This repository contains the course materials for FRE-GY 7773 - Machine Learning
 
 ## Notebooks
 
+Every notebook is accompanied by a link to a corresponding Google Colab session for interactive execution.
+
 ### Lecture 1
 
 - [01_linalg.ipynb](./01_linalg.ipynb) - Linear Algebra examples.
@@ -23,6 +25,11 @@ This repository contains the course materials for FRE-GY 7773 - Machine Learning
 - [02_mle_solution.ipynb](./02_mle_solution.ipynb) - Maximum Likelihood Estimation examples - Solutions.
 - [02_data_finance.ipynb](./02_data_finance.ipynb) - Data in Finance examples.
 - [02_homework.ipynb](./02_homework.ipynb) - Homework on Lecture 2.
+
+## Lecture 3
+
+- [03_linear_regression.ipynb](./03_linear_regression.ipynb) - Linear Regression examples.
+- [03_linear_regression_solution.ipynb](./03_linear_regression_solution.ipynb) - Linear Regression examples - Solutions.
 
 ## Installation
 
