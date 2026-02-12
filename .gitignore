@@ -210,8 +210,8 @@ __marimo__/
 .DS_Store
 
 03_linear_regression_solution.ipynb
-04_ridge_lasso.ipynb
-04_nonlinear_regression.ipynb
+04_california_housing_example.ipynb
+04_ridge_lasso_solution.ipynb
 05_classification.ipynb
 06_optimization.ipynb
 07_gaussian_pca.ipynb
@@ -221,3 +221,5 @@ __marimo__/
 10_time_series.ipynb
 11_neural_networks.ipynb
 12_deep_learning.ipynb
+utils/mse.py
+misc/

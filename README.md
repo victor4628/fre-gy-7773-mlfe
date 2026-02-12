@@ -31,6 +31,11 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 - [03_linear_regression.ipynb](./03_linear_regression.ipynb) - Linear Regression examples.
 - [03_linear_regression_solution.ipynb](./03_linear_regression_solution.ipynb) - Linear Regression examples - Solutions.
 
+## Lecture 4
+
+- [04_ridge_lasso.ipynb](./04_ridge_lasso.ipynb) - Ridge and Lasso Regression examples. Train/validation/test sets, cross-validation, pipeline.
+- [04_ridge_lasso_solution.ipynb](./04_ridge_lasso_solution.ipynb) - Ridge and Lasso Regression examples - Solutions.
+
 ## Installation
 
 1. Clone this repository and navigate to the project directory:
