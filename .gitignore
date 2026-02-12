@@ -221,5 +221,4 @@ __marimo__/
 10_time_series.ipynb
 11_neural_networks.ipynb
 12_deep_learning.ipynb
-utils/mse.py
 misc/
