@@ -206,13 +206,10 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# .DS_Store
 .DS_Store
 
-03_linear_regression_solution.ipynb
 04_california_housing_example.ipynb
 04_ridge_lasso_solution.ipynb
-05_classification.ipynb
 06_optimization.ipynb
 07_gaussian_pca.ipynb
 07_yield_curve_pca.ipynb
@@ -222,3 +219,10 @@ __marimo__/
 11_neural_networks.ipynb
 12_deep_learning.ipynb
 misc/
+05_classification_mnist.ipynb
+05_end_to_end_machine_learning_project.ipynb
+05_uci_credit_card.ipynb
+05_homework.ipynb
+05_classification_solution.ipynb
+06_optimization_1.ipynb
+06_optimization_2.ipynb
