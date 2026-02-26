@@ -209,7 +209,6 @@ __marimo__/
 .DS_Store
 
 04_california_housing_example.ipynb
-04_ridge_lasso_solution.ipynb
 06_optimization.ipynb
 07_gaussian_pca.ipynb
 07_yield_curve_pca.ipynb
@@ -222,7 +221,9 @@ misc/
 05_classification_mnist.ipynb
 05_end_to_end_machine_learning_project.ipynb
 05_uci_credit_card.ipynb
-05_homework.ipynb
 05_classification_solution.ipynb
 06_optimization_1.ipynb
 06_optimization_2.ipynb
+utils/linreg.py
+06_optimization_linreg.ipynb
+06_optimization_methods.ipynb

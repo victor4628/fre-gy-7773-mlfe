@@ -8,7 +8,7 @@ This repository contains the course materials for FRE-GY 7773 - Machine Learning
 
 Every notebook is accompanied by a link to a corresponding Google Colab session for interactive execution.
 
-### Lecture 1
+### Lecture 1 (Introduction to Python, Jupyter, and ML Tools)
 
 - [01_linalg.ipynb](./01_linalg.ipynb) - Linear Algebra examples.
 - [01_probability_statistics.ipynb](./01_probability_statistics.ipynb) - Probability/Stats examples.
@@ -19,22 +19,30 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
   - [01_tools_numpy.ipynb](./01_tools_numpy.ipynb) - Introduction to NumPy for numerical computing.
   - [01_tools_pandas.ipynb](./01_tools_pandas.ipynb) - Introduction to Pandas for data manipulation.
 
-### Lecture 2
+### Lecture 2 (MLE / Data in Finance)
 
 - [02_mle.ipynb](./02_mle.ipynb) - Maximum Likelihood Estimation examples.
 - [02_mle_solution.ipynb](./02_mle_solution.ipynb) - Maximum Likelihood Estimation examples - Solutions.
 - [02_data_finance.ipynb](./02_data_finance.ipynb) - Data in Finance examples.
-- [02_homework.ipynb](./02_homework.ipynb) - Homework on Lecture 2.
+- [02_homework.ipynb](./02_homework.ipynb) - Homework 1.
 
-## Lecture 3
+## Lecture 3 (Linear Regression)
 
 - [03_linear_regression.ipynb](./03_linear_regression.ipynb) - Linear Regression examples.
 - [03_linear_regression_solution.ipynb](./03_linear_regression_solution.ipynb) - Linear Regression examples - Solutions.
 
-## Lecture 4
+## Lecture 4 (Ridge/Lasso)
 
 - [04_ridge_lasso.ipynb](./04_ridge_lasso.ipynb) - Ridge and Lasso Regression examples. Train/validation/test sets, cross-validation, pipeline.
 - [04_ridge_lasso_solution.ipynb](./04_ridge_lasso_solution.ipynb) - Ridge and Lasso Regression examples - Solutions.
+
+## Lecture 5 (Logistic Regression - Classification)
+
+- [05_classification.ipynb](./05_classification.ipynb) - MNIST classification example.
+- [05_classification_solution.ipynb](./05_classification_solution.ipynb) - MNIST classification example - Solutions.
+- [05_homework.ipynb](./05_homework.ipynb) - Homework 2.
+
+## Lecture 6 (Optimization)
 
 ## Installation
 
