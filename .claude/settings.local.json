@@ -6,7 +6,13 @@
       "Bash(git restore 02_homework.ipynb)",
       "Bash(.venv/Scripts/python -c \":*)",
       "Bash(.venv/Scripts/python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=300 --ClearMetadataPreprocessor.enabled=True 05_homework_solution.ipynb)",
-      "Bash(.venv/Scripts/python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=300 05_homework_solution.ipynb)"
+      "Bash(.venv/Scripts/python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=300 05_homework_solution.ipynb)",
+      "Bash(git fetch fbourgey)",
+      "Bash(python3 -c \"import json; json.load\\(open\\(''/Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe/05_classification.ipynb''\\)\\)\")",
+      "Bash(python3 -c \"import json; json.load\\(open\\(''/Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe/05_classification.ipynb''\\)\\); print\\(''✅ JSON is valid — notebook is fixed!''\\)\")",
+      "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe status)",
+      "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe add 05_classification.ipynb)",
+      "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe commit --no-edit)"
     ]
   }
 }
