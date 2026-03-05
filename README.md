@@ -44,6 +44,11 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 
 ## Lecture 6 (Optimization)
 
+- [06_optimization.ipynb](./06_optimization.ipynb) - Optimization examples for Linear Regression.
+- [06_optimization_solution.ipynb](./06_optimization_solution.ipynb) - Optimization examples for Linear Regression - Solutions.
+- [06_optim_logreg.py](./06_optim_logreg.py) - Optimization examples for Logistic Regression.
+- [06_optim_logreg_solution.py](./06_optim_logreg_solution.py) - Optimization examples for Logistic Regression -Solutions.
+
 ## Installation
 
 1. Clone this repository and navigate to the project directory:

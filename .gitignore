@@ -208,8 +208,8 @@ __marimo__/
 
 .DS_Store
 
-04_california_housing_example.ipynb
-06_optimization.ipynb
+06_optim_logreg_solution.py
+06_optimization_linreg_solution.ipynb
 07_gaussian_pca.ipynb
 07_yield_curve_pca.ipynb
 08_clustering.ipynb
@@ -217,13 +217,6 @@ __marimo__/
 10_time_series.ipynb
 11_neural_networks.ipynb
 12_deep_learning.ipynb
-misc/
-05_classification_mnist.ipynb
-05_end_to_end_machine_learning_project.ipynb
-05_uci_credit_card.ipynb
-05_classification_solution.ipynb
-06_optimization_1.ipynb
-06_optimization_2.ipynb
+
 utils/linreg.py
-06_optimization_linreg.ipynb
-06_optimization_methods.ipynb
+misc/
