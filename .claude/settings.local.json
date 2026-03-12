@@ -12,7 +12,13 @@
       "Bash(python3 -c \"import json; json.load\\(open\\(''/Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe/05_classification.ipynb''\\)\\); print\\(''✅ JSON is valid — notebook is fixed!''\\)\")",
       "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe status)",
       "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe add 05_classification.ipynb)",
-      "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe commit --no-edit)"
+      "Bash(git -C /Users/vvaskoff/Documents/GitHub/fre-gy-7773-mlfe commit --no-edit)",
+      "Bash(python -c \"from reportlab.lib.pagesizes import A4; print\\(''reportlab ok''\\)\")",
+      "Bash(.venvScriptspip install:*)",
+      "Bash(.venvScriptspython -c \"from reportlab.lib.pagesizes import A4; print\\(''ok''\\)\")",
+      "Bash(python -m pip install reportlab -q)",
+      "Bash(python -c \"from reportlab.lib.pagesizes import A4; print\\(''ok''\\)\")",
+      "Bash(python make_cheatsheet.py)"
     ]
   }
 }
