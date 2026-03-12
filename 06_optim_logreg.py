@@ -23,7 +23,7 @@ def logistic_loss(theta, X_b, y):
         The mean logistic loss.
     """
     # np.logaddexp more stable than log(1 + exp(z))
-    return # TODO
+    return np.mean(np.logaddexp(0, X_b @ theta) - y * (X_b @ theta))
 
 
 def logistic_grad(theta, X_b, y):
@@ -43,7 +43,7 @@ def logistic_grad(theta, X_b, y):
     np.ndarray, shape (n_features,)
         The gradient of the logistic loss w.r.t. theta.
     """
-    return # TODO
+    return X_b.T @ (expit(X_b @ theta) - y) / len(y)
 
 
 def learning_schedule(t, t0, t1):
@@ -71,8 +71,8 @@ m = 2000  # number of samples
 X = rng.normal(size=(m, 1))
 X_b = add_dummy_feature(X)
 theta_true = np.array([-0.5, 2.0])
-logits = # TODO
-probs = # TODO
+logits = X_b @ theta_true
+probs = expit(logits)
 y = rng.binomial(1, probs)
 
 
@@ -84,8 +84,8 @@ theta = rng.standard_normal(2)
 theta_path_bgd = [theta.copy()]
 
 for _ in range(n_epochs):
-    grad = # TODO
-    theta = # TODO
+    grad = logistic_grad(theta, X_b, y)
+    theta = theta - eta * grad
     theta_path_bgd.append(theta.copy())
 
 theta_path_bgd = np.array(theta_path_bgd)
@@ -98,11 +98,11 @@ n_epochs_sgd = 100
 for epoch in range(n_epochs_sgd):
     for iteration in range(m):
         random_index = rng.integers(m)
-        xi = # TODO
-        yi = # TODO
-        grad = # TODO
+        xi = X_b[random_index : random_index + 1]  # shape (1, n_features)
+        yi = y[random_index : random_index + 1]  # shape (1,)
+        grad = logistic_grad(theta, xi, yi)  # shape (n_features,)
         eta = learning_schedule(epoch * m + iteration, t0=50, t1=500)
-        theta = # TODO
+        theta = theta - eta * grad
         theta_path_sgd.append(theta.copy())
 
 theta_path_sgd = np.array(theta_path_sgd)
@@ -122,40 +122,40 @@ for epoch in range(n_epochs_mgd):
 
     for iteration in range(n_batches_per_epoch):
         idx = iteration * minibatch_size
-        xi = # TODO
-        yi = # TODO
-        grad = # TODO
+        xi = X_shuffled[idx : idx + minibatch_size]
+        yi = y_shuffled[idx : idx + minibatch_size]
+        grad = logistic_grad(theta, xi, yi)
         eta = learning_schedule(
             epoch * n_batches_per_epoch + iteration,
             t0=200,
             t1=1000,
         )
-        theta = # TODO
+        theta = theta - eta * grad
         theta_path_mgd.append(theta.copy())
 
 theta_path_mgd = np.array(theta_path_mgd)
 
 # for all methods, we need m to be large enough to converge to the true theta
-print(f"BGD converged to: {# TODO}")
-print(f"SGD converged to: {# TODO}")
-print(f"MGD converged to: {# TODO}")
+print(f"BGD converged to: {theta_path_bgd[-1]}")
+print(f"SGD converged to: {theta_path_sgd[-1]}")
+print(f"MGD converged to: {theta_path_mgd[-1]}")
 # with sklearn logistic regression
-clf = # TODO
-# TODO
-theta_sklearn = # TODO
-print(f"sklearn converged to: {# TODO}")
-print(f"True theta: {# TODO}")
+clf = LogisticRegression(fit_intercept=True, solver="lbfgs", max_iter=1000)
+clf.fit(X, y)
+theta_sklearn = np.hstack([clf.intercept_, clf.coef_.flatten()])
+print(f"sklearn converged to: {theta_sklearn}")
+print(f"True theta: {theta_true}")
 
 # plot the paths of the parameters for each optimization method
 fig, ax = plt.subplots()
 ax.plot(
-    # TODO, # TODO, "*-r", linewidth=1, label="Stochastic"
+    theta_path_sgd[:, 0], theta_path_sgd[:, 1], "*-r", linewidth=1, label="Stochastic"
 )
 ax.plot(
-    # TODO, # TODO, "x-g", linewidth=2, label="Mini-batch"
+    theta_path_mgd[:, 0], theta_path_mgd[:, 1], "x-g", linewidth=2, label="Mini-batch"
 )
-ax.plot(# TODO, # TODO, ".-b", linewidth=3, label="Batch")
-ax.plot(# TODO, # TODO, ".k", label="Optimal")
+ax.plot(theta_path_bgd[:, 0], theta_path_bgd[:, 1], ".-b", linewidth=3, label="Batch")
+ax.plot(theta_true[0], theta_true[1], ".k", label="Optimal")
 ax.legend(loc="upper left")
 ax.set_xlabel(r"$\theta_0$")
 ax.set_ylabel(r"$\theta_1$")
