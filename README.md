@@ -49,6 +49,14 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 - [06_optim_logreg.py](./06_optim_logreg.py) - Optimization examples for Logistic Regression.
 - [06_optim_logreg_solution.py](./06_optim_logreg_solution.py) - Optimization examples for Logistic Regression -Solutions.
 
+## Lecture 7 (PCA)
+
+- [07_gaussian_pca.ipynb](./07_gaussian_pca.ipynb) - PCA example for Gaussian data.
+- [07_gaussian_pca_solution.ipynb](./07_gaussian_pca_solution.ipynb) - PCA example for Gaussian data - Solutions.
+- [07_yield_curve_pca.ipynb](./07_yield_curve_pca.ipynb) - PCA example for yield curves.
+- [07_yield_curve_pca_solution.ipynb](./07_yield_curve_pca_solution.ipynb) - PCA example for yield curves - Solutions.
+- [07_homework.ipynb](./07_homework.ipynb) - Homework 3.
+
 ## Installation
 
 1. Clone this repository and navigate to the project directory:
