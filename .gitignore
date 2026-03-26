@@ -208,10 +208,8 @@ __marimo__/
 
 .DS_Store
 
-06_optim_logreg_solution.py
-06_optimization_linreg_solution.ipynb
-07_gaussian_pca.ipynb
-07_yield_curve_pca.ipynb
+07_gaussian_pca_solution.ipynb
+07_yield_curve_pca_solution.ipynb
 08_clustering.ipynb
 09_gaussian_mixture_models.ipynb
 10_time_series.ipynb
@@ -220,3 +218,4 @@ __marimo__/
 
 utils/linreg.py
 misc/
+00_projects.ipynb
