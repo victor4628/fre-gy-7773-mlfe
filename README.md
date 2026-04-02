@@ -57,6 +57,13 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 - [07_yield_curve_pca_solution.ipynb](./07_yield_curve_pca_solution.ipynb) - PCA example for yield curves - Solutions.
 - [07_homework.ipynb](./07_homework.ipynb) - Homework 3.
 
+## Lecture 8 (K-Means and Gaussian Mixture Models)
+
+- [08_k_means.ipynb](./08_k_means.ipynb) - K-Means clustering example.
+- [08_k_means_solution.ipynb](./08_k_means_solution.ipynb) - K-Means clustering example - Solutions.
+- [08_gaussian_mixture_models.ipynb](./08_gaussian_mixture_models.ipynb) - Gaussian Mixture Models example.
+- [08_gaussian_mixture_models_solution.ipynb](./08_gaussian_mixture_models_solution.ipynb) - Gaussian Mixture Models example - Solutions.
+
 ## Installation
 
 1. Clone this repository and navigate to the project directory:
