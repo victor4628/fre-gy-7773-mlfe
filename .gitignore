@@ -218,3 +218,10 @@ __marimo__/
 utils/linreg.py
 misc/
 00_projects.ipynb
+stats/gaussian_mixtures_solution.py
+08_gaussian_mixture_models_solution.ipynb
+10_pca_k_means_returns.ipynb
+07_gaussian_pca_solution.ipynb
+08_pca_k_means_returns.ipynb
+09_neural_networks.ipynb
+08_k_means_solution.ipynb
