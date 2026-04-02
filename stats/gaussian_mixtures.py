@@ -31,7 +31,7 @@ def gaussian_mixture_pdf(x, weights, means, variances):
     weights = np.atleast_1d(np.asarray(weights))
     means = np.atleast_1d(np.asarray(means))
     variances = np.atleast_1d(np.asarray(variances))
-    n_components = #TODO
+    n_components = len(weights)
 
     if weights.sum() != 1:
         raise ValueError("Weights must sum to 1.")
@@ -44,6 +44,7 @@ def gaussian_mixture_pdf(x, weights, means, variances):
 
     pdf_values = np.zeros(x.shape[0])
 
-    #TODO - Loop over each component and compute the weighted PDF
+    for i in range(n_components):
+        pdf_values += weights[i] * stats.norm.pdf(x, loc=means[i], scale=np.sqrt(variances[i]))
 
     return pdf_values
