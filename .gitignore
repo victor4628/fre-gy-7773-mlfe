@@ -207,6 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 .DS_Store
+.claude/
 
 07_gaussian_pca_solution.ipynb
 07_yield_curve_pca_solution.ipynb
