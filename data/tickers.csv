@@ -1,0 +1,61 @@
+ticker,name,sector
+AAPL,Apple Inc.,Technology
+ABBV,AbbVie Inc.,Healthcare
+ADBE,Adobe Inc.,Technology
+AMD,"Advanced Micro Devices, Inc.",Technology
+AMGN,Amgen Inc.,Healthcare
+AMZN,"Amazon.com, Inc.",Consumer Cyclical
+AXP,American Express Company,Financial Services
+BA,Boeing Company (The),Industrials
+BAC,Bank of America Corporation,Financial Services
+BLK,"BlackRock, Inc.",Financial Services
+BMY,Bristol-Myers Squibb Company,Healthcare
+C,"Citigroup, Inc.",Financial Services
+CAT,"Caterpillar, Inc.",Industrials
+CMCSA,Comcast Corporation,Communication Services
+COP,ConocoPhillips,Energy
+COST,Costco Wholesale Corporation,Consumer Defensive
+CRM,"Salesforce, Inc.",Technology
+CVX,Chevron Corporation,Energy
+DE,Deere & Company,Industrials
+DHR,Danaher Corporation,Healthcare
+DIS,Walt Disney Company (The),Communication Services
+DUK,Duke Energy Corporation (Holdin,Utilities
+EOG,"EOG Resources, Inc.",Energy
+GE,GE Aerospace,Industrials
+GOOGL,Alphabet Inc.,Communication Services
+GS,"Goldman Sachs Group, Inc. (The)",Financial Services
+HD,"Home Depot, Inc. (The)",Consumer Cyclical
+HON,Honeywell International Inc.,Industrials
+IBM,International Business Machines,Technology
+INTC,Intel Corporation,Technology
+JNJ,Johnson & Johnson,Healthcare
+JPM,JP Morgan Chase & Co.,Financial Services
+KO,Coca-Cola Company (The),Consumer Defensive
+LLY,Eli Lilly and Company,Healthcare
+MCD,McDonald's Corporation,Consumer Cyclical
+META,"Meta Platforms, Inc.",Communication Services
+MRK,"Merck & Company, Inc.",Healthcare
+MS,Morgan Stanley,Financial Services
+MSFT,Microsoft Corporation,Technology
+NEE,"NextEra Energy, Inc.",Utilities
+NFLX,"Netflix, Inc.",Communication Services
+NKE,"Nike, Inc.",Consumer Cyclical
+NVDA,NVIDIA Corporation,Technology
+ORCL,Oracle Corporation,Technology
+PEP,"Pepsico, Inc.",Consumer Defensive
+PFE,"Pfizer, Inc.",Healthcare
+QCOM,QUALCOMM Incorporated,Technology
+RTX,RTX Corporation,Industrials
+SBUX,Starbucks Corporation,Consumer Cyclical
+SCHW,Charles Schwab Corporation (The,Financial Services
+SLB,SLB Limited,Energy
+T,AT&T Inc.,Communication Services
+TMO,Thermo Fisher Scientific Inc,Healthcare
+UNH,UnitedHealth Group Incorporated,Healthcare
+UNP,Union Pacific Corporation,Industrials
+USB,U.S. Bancorp,Financial Services
+VZ,Verizon Communications Inc.,Communication Services
+WFC,Wells Fargo & Company,Financial Services
+WMT,Walmart Inc.,Consumer Defensive
+XOM,Exxon Mobil Corporation,Energy

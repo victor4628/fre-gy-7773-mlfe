@@ -63,6 +63,10 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 - [08_k_means_solution.ipynb](./08_k_means_solution.ipynb) - K-Means clustering example - Solutions.
 - [08_gaussian_mixture_models.ipynb](./08_gaussian_mixture_models.ipynb) - Gaussian Mixture Models example.
 - [08_gaussian_mixture_models_solution.ipynb](./08_gaussian_mixture_models_solution.ipynb) - Gaussian Mixture Models example - Solutions.
+- [08_pca_k_means_returns.ipynb](./08_pca_k_means_returns.ipynb) - PCA + K-Means example for stock returns.
+- [08_pca_k_means_returns_solution.ipynb](./08_pca_k_means_returns_solution.ipynb) - PCA + K-Means example for stock returns - Solutions.
+
+## Lecture 9 (Neural Networks and PyTorch)
 
 ## Installation
 
