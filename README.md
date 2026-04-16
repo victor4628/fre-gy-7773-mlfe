@@ -68,6 +68,16 @@ Every notebook is accompanied by a link to a corresponding Google Colab session 
 
 ## Lecture 9 (Neural Networks and PyTorch)
 
+- [09_pytorch_intro.ipynb](./09_pytorch_intro.ipynb) - Introduction to PyTorch for deep learning.
+- [09_pytorch_fundamentals.ipynb](./09_pytorch_fundamentals.ipynb) - PyTorch fundamentals.
+- [09_pytorch_fundamentals_solution.ipynb](./09_pytorch_fundamentals_solution.ipynb) - PyTorch fundamentals - Solutions.
+- [09_tensor_in_pytorch.ipynb](./09_tensor_in_pytorch.ipynb) - Tensors in PyTorch.
+- [09_tensor_in_pytorch_solution.ipynb](./09_tensor_in_pytorch_solution.ipynb) - Tensors in PyTorch - Solutions.
+- [09_neural_networks_in_pytorch.ipynb](./09_neural_networks_in_pytorch.ipynb) - Neural networks in PyTorch.
+- [09_neural_networks_in_pytorch_solution.ipynb](./09_neural_networks_in_pytorch_solution.ipynb) - Neural networks in PyTorch - Solutions.
+- [09_training_neural_networks.ipynb](./09_training_neural_networks.ipynb) - Training neural networks.
+- [09_training_neural_networks_solution.ipynb](./09_training_neural_networks_solution.ipynb) - Training neural networks - Solutions.
+
 ## Installation
 
 1. Clone this repository and navigate to the project directory:
