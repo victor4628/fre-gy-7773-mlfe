@@ -214,8 +214,3 @@ __marimo__/
 misc/
 00_projects.ipynb
 stats/gaussian_mixtures_solution.py
-09_tensor_in_pytorch_solution.ipynb
-09_fashion_mnist_solution.ipynb
-09_training_neural_networks_solution.ipynb
-09_pytorch_fundamentals_solution.ipynb
-09_neural_networks_in_pytorch_solution.ipynb
