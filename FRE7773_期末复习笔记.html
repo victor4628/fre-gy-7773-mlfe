@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>FRE-GY 7773 期末复习笔记</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style>
+:root {
+  --text: #1f2328;
+  --bg: #ffffff;
+  --muted: #57606a;
+  --border: #d0d7de;
+  --code-bg: #f6f8fa;
+  --link: #0969da;
+}
+html { font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+               Helvetica, Arial, "Noto Sans CJK SC", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 920px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 4rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { line-height: 1.3; margin-top: 2em; margin-bottom: 0.6em; }
+h1 { font-size: 2em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+h2 { font-size: 1.5em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+h3 { font-size: 1.2em; }
+p, li { font-size: 1rem; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }
+blockquote {
+  border-left: 4px solid var(--border);
+  margin: 1em 0; padding: 0.2em 1em;
+  color: var(--muted); background: #f6f8fa;
+}
+table {
+  border-collapse: collapse; margin: 1em 0;
+  display: block; overflow-x: auto;
+}
+th, td { border: 1px solid var(--border); padding: 6px 13px; }
+th { background: var(--code-bg); font-weight: 600; }
+tr:nth-child(2n) td { background: #fafbfc; }
+code {
+  font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+pre {
+  background: var(--code-bg);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.88em;
+  line-height: 1.5;
+}
+pre code { background: transparent; padding: 0; }
+mjx-container { font-size: 1.05em !important; }
+mjx-container[display="true"] { margin: 0.8em 0 !important; }
+@media print {
+  body { max-width: none; margin: 0; padding: 1cm; font-size: 11pt; }
+  pre, blockquote, table { page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">FRE-GY 7773 期末复习笔记</h1>
+</header>
+<h1 id="fre-gy-7773-machine-learning-in-financial-engineering-期末复习笔记">FRE-GY 7773 Machine Learning in Financial Engineering — 期末复习笔记</h1>
+<blockquote>
+<p>整理自 Florian Bourgey 的 9 套 lecture slides + 课程 Jupyter notebooks（含 <code>_solution</code> 答案版）。 编号沿用课程的 lecture 顺序（01–09）。中英混合，公式与术语保留英文，便于答题对照。</p>
+</blockquote>
+<hr />
+<h2 id="目录">目录</h2>
+<ol type="1">
+<li><a href="#lecture-1--数学基础回顾">Lecture 1 — 数学基础回顾</a></li>
+<li><a href="#lecture-2--maximum-likelihood-estimation-mle">Lecture 2 — Maximum Likelihood Estimation (MLE)</a></li>
+<li><a href="#lecture-3--linear-regression--ols">Lecture 3 — Linear Regression / OLS</a></li>
+<li><a href="#lecture-4--ridge--lasso正则化">Lecture 4 — Ridge &amp; Lasso（正则化）</a></li>
+<li><a href="#lecture-5--classification--logistic-regression">Lecture 5 — Classification &amp; Logistic Regression</a></li>
+<li><a href="#lecture-6--optimization-for-ml">Lecture 6 — Optimization for ML</a></li>
+<li><a href="#lecture-7--pca">Lecture 7 — PCA</a></li>
+<li><a href="#lecture-8--k-means--gaussian-mixture-models">Lecture 8 — K-Means &amp; Gaussian Mixture Models</a></li>
+<li><a href="#lecture-9--neural-networks--pytorch">Lecture 9 — Neural Networks &amp; PyTorch</a></li>
+<li><a href="#附录-a--sklearn--pytorch-代码模板速查">附录 A — sklearn / PyTorch 代码模板速查</a></li>
+<li><a href="#附录-b--期末高频考点--易错点">附录 B — 期末高频考点 &amp; 易错点</a></li>
+</ol>
+<hr />
+<h2 id="lecture-1-数学基础回顾">Lecture 1 — 数学基础回顾</h2>
+<h3 id="矩阵代数-linear-algebra">1.1 矩阵代数 (Linear Algebra)</h3>
+<p><strong>关键恒等式</strong></p>
+<ul>
+<li>转置：<span class="math inline">\((\mathbf{AB})^\top = \mathbf{B}^\top\mathbf{A}^\top\)</span></li>
+<li>逆：<span class="math inline">\((\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\)</span>，<span class="math inline">\((\mathbf{A}^\top)^{-1} = (\mathbf{A}^{-1})^\top\)</span></li>
+<li><strong>Woodbury 恒等式</strong>（重要，常用于“小修正大矩阵”求逆）： <span class="math display">\[(\mathbf{A}+\mathbf{BD}^{-1}\mathbf{C})^{-1} = \mathbf{A}^{-1} - \mathbf{A}^{-1}\mathbf{B}(\mathbf{D}+\mathbf{C}\mathbf{A}^{-1}\mathbf{B})^{-1}\mathbf{C}\mathbf{A}^{-1}\]</span></li>
+<li><span class="math inline">\((\mathbf{I}+\mathbf{AB})^{-1}\mathbf{A} = \mathbf{A}(\mathbf{I}+\mathbf{BA})^{-1}\)</span></li>
+</ul>
+<p><strong>Trace 与 Determinant</strong></p>
+<ul>
+<li><span class="math inline">\(\operatorname{Tr}(\mathbf{A}) = \sum_i A_{ii}\)</span>，循环性 <span class="math inline">\(\operatorname{Tr}(\mathbf{ABC}) = \operatorname{Tr}(\mathbf{BCA}) = \operatorname{Tr}(\mathbf{CAB})\)</span>。</li>
+<li><span class="math inline">\(|\mathbf{AB}| = |\mathbf{A}||\mathbf{B}|\)</span>，<span class="math inline">\(|\mathbf{A}^{-1}| = 1/|\mathbf{A}|\)</span>。</li>
+<li>重要恒等式：<span class="math inline">\(|\mathbf{I}_N + \mathbf{ab}^\top| = 1 + \mathbf{a}^\top\mathbf{b}\)</span>。</li>
+</ul>
+<p><strong>矩阵求导（必须背）</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>表达式</th>
+<th>对 <span class="math inline">\(\mathbf{x}\)</span> 的梯度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathbf{x}^\top\mathbf{a}\)</span> 或 <span class="math inline">\(\mathbf{a}^\top\mathbf{x}\)</span></td>
+<td><span class="math inline">\(\mathbf{a}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{x}^\top \mathbf{A}\mathbf{x}\)</span></td>
+<td><span class="math inline">\((\mathbf{A}+\mathbf{A}^\top)\mathbf{x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>若 <span class="math inline">\(\mathbf{A}\)</span> 对称: <span class="math inline">\(\mathbf{x}^\top\mathbf{A}\mathbf{x}\)</span></td>
+<td><span class="math inline">\(2\mathbf{A}\mathbf{x}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\|\mathbf{y}-\mathbf{X}\boldsymbol\theta\|_2^2\)</span></td>
+<td><span class="math inline">\(-2\mathbf{X}^\top(\mathbf{y}-\mathbf{X}\boldsymbol\theta)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>特征分解 / Eigendecomposition</strong></p>
+<ul>
+<li>对称矩阵 <span class="math inline">\(\mathbf{A}\in\mathbb{R}^{M\times M}\)</span> 可对角化为 <span class="math inline">\(\mathbf{A}=\mathbf{U}\boldsymbol\Lambda\mathbf{U}^\top\)</span>，其中 <span class="math inline">\(\mathbf{U}\)</span> 为正交矩阵。</li>
+<li><span class="math inline">\(\det(\mathbf{A}) = \prod_i \lambda_i\)</span>；<span class="math inline">\(\operatorname{Tr}(\mathbf{A}) = \sum_i \lambda_i\)</span>。</li>
+</ul>
+<p><strong>奇异值分解 / Singular Value Decomposition (SVD)</strong></p>
+<p>对任意 <span class="math inline">\(\mathbf{X}\in\mathbb{R}^{M\times N}\)</span>： <span class="math display">\[\mathbf{X} = \mathbf{U}\boldsymbol\Sigma\mathbf{V}^\top = \sum_{i=1}^{r} \sigma_i\,\mathbf{u}_i\mathbf{v}_i^\top\]</span></p>
+<ul>
+<li><span class="math inline">\(\sigma_1\ge\sigma_2\ge\dots\ge\sigma_p\ge 0\)</span>；<span class="math inline">\(\mathbf{u}_i\)</span> 为左奇异向量，<span class="math inline">\(\mathbf{v}_i\)</span> 为右奇异向量。</li>
+<li><strong>关键关系</strong>：<span class="math inline">\(\mathbf{X}^\top\mathbf{X} = \mathbf{V}\boldsymbol\Sigma^2\mathbf{V}^\top\)</span>，<span class="math inline">\(\mathbf{X}\mathbf{X}^\top = \mathbf{U}\boldsymbol\Sigma^2\mathbf{U}^\top\)</span>。</li>
+<li>截断 SVD（取前 <span class="math inline">\(k\)</span> 项）= rank-<span class="math inline">\(k\)</span> 最佳逼近（<strong>Eckart–Young</strong>）。</li>
+</ul>
+<p><strong>对称半正定 (PSD)</strong></p>
+<ul>
+<li><span class="math inline">\(\mathbf{A}\succeq 0 \iff \mathbf{x}^\top\mathbf{A}\mathbf{x}\ge 0\;\forall\mathbf{x} \iff\)</span> 所有 <span class="math inline">\(\lambda_i\ge 0\)</span>。</li>
+<li>Multivariate Gaussian 要求协方差矩阵 <strong>正定</strong>（特征值严格 &gt; 0），否则密度未定义。</li>
+</ul>
+<h3 id="概率与统计">1.2 概率与统计</h3>
+<p><strong>乘法法则与全概率</strong></p>
+<ul>
+<li>Product rule: <span class="math inline">\(p(X,Y) = p(Y\mid X)p(X)\)</span>。</li>
+<li>Total probability: <span class="math inline">\(p(X) = \sum_i p(X\mid Y_i)p(Y_i)\)</span>（或积分形式）。</li>
+<li><strong>Bayes 定理</strong>：<span class="math inline">\(p(Y\mid X) = \dfrac{p(X\mid Y)p(Y)}{p(X)}\)</span>。</li>
+</ul>
+<p><strong>一元高斯</strong></p>
+<p><span class="math display">\[\mathcal N(x\mid\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right),\quad \mathbb E[x]=\mu,\ \operatorname{Var}(x)=\sigma^2\]</span></p>
+<p><strong>多元高斯 (MVG)</strong></p>
+<p><span class="math display">\[\mathcal N(\mathbf{x}\mid\boldsymbol\mu,\boldsymbol\Sigma) = \frac{1}{(2\pi)^{d/2}|\boldsymbol\Sigma|^{1/2}}\exp\!\left(-\tfrac12(\mathbf{x}-\boldsymbol\mu)^\top\boldsymbol\Sigma^{-1}(\mathbf{x}-\boldsymbol\mu)\right)\]</span></p>
+<ul>
+<li><strong>Mahalanobis 距离</strong>：<span class="math inline">\(\Delta(\mathbf{x}) = \sqrt{(\mathbf{x}-\boldsymbol\mu)^\top\boldsymbol\Sigma^{-1}(\mathbf{x}-\boldsymbol\mu)}\)</span>（推广 z-score）。</li>
+<li>椭圆等高线由 <span class="math inline">\(\boldsymbol\Sigma\)</span> 的特征向量决定主轴方向。</li>
+</ul>
+<p><strong>MVG 的边缘 / 条件分布（重要！）</strong></p>
+<p>设 <span class="math inline">\(\begin{pmatrix}\mathbf{x}_1\\ \mathbf{x}_2\end{pmatrix}\sim\mathcal N\!\left(\begin{pmatrix}\boldsymbol\mu_1\\\boldsymbol\mu_2\end{pmatrix},\begin{pmatrix}\boldsymbol\Sigma_{11}&amp;\boldsymbol\Sigma_{12}\\\boldsymbol\Sigma_{12}^\top&amp;\boldsymbol\Sigma_{22}\end{pmatrix}\right)\)</span>：</p>
+<ul>
+<li><strong>边缘</strong>：<span class="math inline">\(\mathbf{x}_1\sim\mathcal N(\boldsymbol\mu_1,\boldsymbol\Sigma_{11})\)</span>。</li>
+<li><strong>条件</strong>：<span class="math inline">\(\mathbf{x}_1\mid\mathbf{x}_2 \sim \mathcal N(\boldsymbol\mu_{1\mid 2},\boldsymbol\Sigma_{1\mid 2})\)</span>，其中 <span class="math display">\[\boldsymbol\mu_{1\mid 2} = \boldsymbol\mu_1 + \boldsymbol\Sigma_{12}\boldsymbol\Sigma_{22}^{-1}(\mathbf{x}_2-\boldsymbol\mu_2),\qquad \boldsymbol\Sigma_{1\mid 2} = \boldsymbol\Sigma_{11}-\boldsymbol\Sigma_{12}\boldsymbol\Sigma_{22}^{-1}\boldsymbol\Sigma_{12}^\top\]</span></li>
+<li>条件协方差 <strong>不依赖</strong> 观测值 <span class="math inline">\(\mathbf{x}_2\)</span>。</li>
+<li>若 <span class="math inline">\(\boldsymbol\Sigma_{12}=\mathbf{0}\)</span>（独立），则条件分布 = 边缘分布。</li>
+</ul>
+<p><strong>仿射变换与卷积</strong></p>
+<ul>
+<li><span class="math inline">\(\mathbf{x}\sim\mathcal N(\boldsymbol\mu,\boldsymbol\Sigma)\Rightarrow \mathbf{Ax}+\mathbf{b}\sim\mathcal N(\mathbf{A}\boldsymbol\mu+\mathbf{b},\mathbf{A}\boldsymbol\Sigma\mathbf{A}^\top)\)</span>。</li>
+<li>独立高斯之和：<span class="math inline">\(\mathbf{x}+\mathbf{y}\sim\mathcal N(\boldsymbol\mu+\mathbf{m},\boldsymbol\Sigma+\mathbf{S})\)</span>。</li>
+</ul>
+<p><strong>卡方与 Student’s t</strong></p>
+<ul>
+<li>若 <span class="math inline">\(x_i\overset{iid}{\sim}\mathcal N(0,1)\)</span>，则 <span class="math inline">\(\sum x_i^2 \sim \chi^2_n\)</span>。</li>
+<li>若 <span class="math inline">\(\mathbf{A}\)</span> 对称且幂等，<span class="math inline">\(\mathbf{x}\sim\mathcal N(\mathbf{0},\mathbf{I})\)</span>，则 <span class="math inline">\(\mathbf{x}^\top\mathbf{A}\mathbf{x}\sim \chi^2_{\operatorname{Tr}(\mathbf{A})}\)</span>。</li>
+<li><span class="math inline">\(t_n = \dfrac{x}{\sqrt{y/n}}\)</span>，<span class="math inline">\(x\sim\mathcal N(0,1),\ y\sim\chi_n^2\)</span> 独立。</li>
+</ul>
+<hr />
+<h2 id="lecture-2-maximum-likelihood-estimation-mle">Lecture 2 — Maximum Likelihood Estimation (MLE)</h2>
+<h3 id="概念">2.1 概念</h3>
+<p>给定 i.i.d. 样本 <span class="math inline">\(\{x_i\}_{i=1}^n\)</span> 和参数模型 <span class="math inline">\(p(x\mid\theta)\)</span>：</p>
+<ul>
+<li><strong>Likelihood</strong>: <span class="math inline">\(\mathcal L(\theta) = \prod_{i=1}^n p(x_i\mid\theta)\)</span></li>
+<li><strong>Log-likelihood</strong>: <span class="math inline">\(\ell(\theta) = \sum_i \log p(x_i\mid\theta)\)</span></li>
+<li><strong>MLE</strong>: <span class="math inline">\(\hat\theta_{\text{MLE}} = \arg\max_\theta \mathcal L(\theta) = \arg\max_\theta \ell(\theta)\)</span></li>
+</ul>
+<blockquote>
+<p>取 log 的好处：乘积变求和；数值稳定；常使目标函数变凹（concave）。</p>
+</blockquote>
+<p><strong>直观</strong>：选择 <span class="math inline">\(\theta\)</span> 使观察到的数据“看起来最典型”。</p>
+<h3 id="经典模型的-mle-闭式解">2.2 经典模型的 MLE 闭式解</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>模型</th>
+<th>MLE 闭式解</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Bernoulli(<span class="math inline">\(\theta\)</span>)</strong></td>
+<td><span class="math inline">\(\hat\theta = \bar x_n = \tfrac{1}{n}\sum x_i\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Binomial(<span class="math inline">\(n,\theta\)</span>)</strong></td>
+<td><span class="math inline">\(\hat\theta = x/n\)</span>（样本成功比例）</td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\(\mathcal N(\mu,\sigma^2)\)</span></strong></td>
+<td><span class="math inline">\(\hat\mu = \bar x_n,\ \hat\sigma^2_{\text{MLE}} = \tfrac{1}{n}\sum(x_i-\bar x)^2\)</span>（<strong>有偏</strong>！）</td>
+</tr>
+<tr class="even">
+<td>无偏方差</td>
+<td><span class="math inline">\(\hat\sigma^2_{\text{unb}} = \tfrac{1}{n-1}\sum(x_i-\bar x)^2\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>MVG <span class="math inline">\(\mathcal N(\boldsymbol\mu,\boldsymbol\Sigma)\)</span></strong></td>
+<td><span class="math inline">\(\hat{\boldsymbol\mu}=\tfrac1n\sum\mathbf x_i,\ \hat{\boldsymbol\Sigma}=\tfrac1n\sum(\mathbf x_i-\hat{\boldsymbol\mu})(\mathbf x_i-\hat{\boldsymbol\mu})^\top\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="关键代码bernoulli-mle-数值验证">2.3 关键代码（Bernoulli MLE 数值验证）</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>xs <span class="op">=</span> np.random.binomial(<span class="dv">1</span>, <span class="fl">0.7</span>, size<span class="op">=</span><span class="dv">200</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>theta_hat <span class="op">=</span> xs.mean()       <span class="co"># MLE = sample mean</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>loglik <span class="op">=</span> <span class="kw">lambda</span> t: np.<span class="bu">sum</span>(xs<span class="op">*</span>np.log(t) <span class="op">+</span> (<span class="dv">1</span><span class="op">-</span>xs)<span class="op">*</span>np.log(<span class="dv">1</span><span class="op">-</span>t))</span></code></pre></div>
+<p><strong>考点提醒</strong>：MLE 不一定无偏；高斯方差的 MLE 比无偏估计 small by factor <span class="math inline">\((n-1)/n\)</span>。</p>
+<hr />
+<h2 id="lecture-3-linear-regression-ols">Lecture 3 — Linear Regression / OLS</h2>
+<h3 id="回归任务">3.1 回归任务</h3>
+<ul>
+<li>风险（risk）：<span class="math inline">\(R(f) = \mathbb E[(Y-f(\mathbf X))^2]\)</span>。</li>
+<li>最优解（贝叶斯回归函数）：<span class="math inline">\(r(\mathbf x) = \mathbb E[Y\mid\mathbf X=\mathbf x]\)</span>。</li>
+<li><strong>误差分解</strong>：<span class="math inline">\(R(f) = \underbrace{\int (f(\mathbf x)-r(\mathbf x))^2 p(\mathbf x)d\mathbf x}_{\text{逼近误差}} + \underbrace{\int\operatorname{Var}(Y\mid\mathbf X=\mathbf x)p(\mathbf x)d\mathbf x}_{\text{不可约误差}}\)</span>。</li>
+</ul>
+<h3 id="经验风险最小化-erm">3.2 经验风险最小化 (ERM)</h3>
+<p><span class="math display">\[\hat f \in \arg\min_{f\in\mathcal F}\frac{1}{n}\sum_{i=1}^n (y_i-f(\mathbf x_i))^2\]</span></p>
+<blockquote>
+<p>模型族 <span class="math inline">\(\mathcal F\)</span> 太复杂会过拟合；要控制复杂度。</p>
+</blockquote>
+<h3 id="一维-ols">3.3 一维 OLS</h3>
+<p>模型：<span class="math inline">\(y_i = \theta_0 + \theta_1 x_i + \varepsilon_i\)</span>，<span class="math inline">\(\varepsilon_i\overset{iid}{\sim}\mathcal N(0,\sigma^2)\)</span>。</p>
+<p><strong>MLE = 最小二乘</strong>：在高斯噪声假设下，<span class="math inline">\(\arg\max\ell \iff \arg\min\sum(y_i-\theta_0-\theta_1 x_i)^2\)</span>。</p>
+<p><strong>闭式解</strong>： <span class="math display">\[\hat\theta_1 = \frac{\sum(x_i-\bar x)(y_i-\bar y)}{\sum(x_i-\bar x)^2} = \operatorname{Corr}(x,y)\cdot\frac{\sqrt{\operatorname{Var}(y)}}{\sqrt{\operatorname{Var}(x)}},\qquad \hat\theta_0 = \bar y - \hat\theta_1\bar x\]</span></p>
+<h3 id="多元-ols向量化">3.4 多元 OLS（向量化）</h3>
+<p>设 design matrix <span class="math inline">\(\mathbf X\in\mathbb R^{n\times(p+1)}\)</span>（首列为 1）： <span class="math display">\[\hat{\boldsymbol\theta} = \arg\min_{\boldsymbol\theta}\tfrac12\|\mathbf y - \mathbf X\boldsymbol\theta\|_2^2\]</span></p>
+<p><strong>梯度</strong>：<span class="math inline">\(\nabla f(\boldsymbol\theta) = \mathbf X^\top(\mathbf X\boldsymbol\theta-\mathbf y)\)</span>。</p>
+<p><strong>Normal equations</strong>：<span class="math inline">\(\mathbf X^\top\mathbf X\boldsymbol\theta = \mathbf X^\top\mathbf y\)</span>。</p>
+<p><strong>Full-rank 解</strong>：<span class="math inline">\(\hat{\boldsymbol\theta} = (\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\mathbf y\)</span>。</p>
+<blockquote>
+<p>实战中<strong>绝不</strong>显式计算 <span class="math inline">\((\mathbf X^\top\mathbf X)^{-1}\)</span>（昂贵 + 数值不稳定），而用 QR / SVD / <code>numpy.linalg.solve</code>。</p>
+</blockquote>
+<h3 id="几何性质-hat-matrix">3.5 几何性质 — Hat matrix</h3>
+<p><span class="math display">\[\hat{\mathbf y} = \mathbf X\hat{\boldsymbol\theta} = \mathbf H\mathbf y,\qquad \mathbf H = \mathbf X(\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\]</span></p>
+<ul>
+<li><span class="math inline">\(\mathbf H\)</span> 对称 (<span class="math inline">\(\mathbf H^\top=\mathbf H\)</span>) 且幂等 (<span class="math inline">\(\mathbf H^2=\mathbf H\)</span>) ⇒ 是到 <span class="math inline">\(\mathbf X\)</span> 列空间的正交投影矩阵。</li>
+<li>残差 <span class="math inline">\(\mathbf y-\hat{\mathbf y}\)</span> 与 <span class="math inline">\(\mathbf X\)</span> 的列空间正交。</li>
+</ul>
+<h3 id="统计性质">3.6 统计性质</h3>
+<p><strong>Gaussian linear model</strong>: <span class="math inline">\(\mathbf y = \mathbf X\boldsymbol\theta + \boldsymbol\epsilon,\ \boldsymbol\epsilon\mid\mathbf X\sim\mathcal N(\mathbf 0,\sigma^2\mathbf I)\)</span>。</p>
+<ul>
+<li><span class="math inline">\(\hat{\boldsymbol\theta}\mid\mathbf X \sim \mathcal N(\boldsymbol\theta,\sigma^2(\mathbf X^\top\mathbf X)^{-1})\)</span></li>
+<li><strong>无偏</strong>：<span class="math inline">\(\mathbb E[\hat{\boldsymbol\theta}]=\boldsymbol\theta\)</span>。</li>
+<li>是 <span class="math inline">\(t\)</span>-检验的基础。</li>
+</ul>
+<p><strong>Gauss–Markov 定理</strong>：在所有线性无偏估计量中，OLS 方差最小（<strong>BLUE</strong>）。<strong>不需要高斯假设</strong>。</p>
+<h3 id="关键-sklearn-statsmodels-代码">3.7 关键 sklearn / statsmodels 代码</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># sklearn</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>model.fit(X, y)             <span class="co"># X: (n, p)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>model.intercept_, model.coef_</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>y_hat <span class="op">=</span> model.predict(X_new)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co"># statsmodels (含 t-test, p-values, R^2 自动报告)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>X_sm <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>results <span class="op">=</span> sm.OLS(y, X_sm).fit()</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="bu">print</span>(results.summary())</span></code></pre></div>
+<p><strong>CAPM 应用</strong>：<span class="math inline">\(R_i - R_f = \alpha + \beta(R_M - R_f) + \varepsilon\)</span>。 - <span class="math inline">\(\beta\)</span>：市场风险敞口；<span class="math inline">\(\alpha\)</span>：超额收益。 - 用 <code>sm.OLS(asset_excess, sm.add_constant(market_excess)).fit()</code>。</p>
+<hr />
+<h2 id="lecture-4-ridge-lasso正则化">Lecture 4 — Ridge &amp; Lasso（正则化）</h2>
+<h3 id="病态问题动机ols-via-svd">4.1 病态问题动机（OLS via SVD）</h3>
+<p><span class="math display">\[\hat{\boldsymbol\theta}_{\text{OLS}} = \mathbf X^+\mathbf y = \sum_{i=1}^r \frac{1}{s_i}\mathbf v_i(\mathbf u_i^\top\mathbf y)\]</span></p>
+<ul>
+<li>小奇异值 <span class="math inline">\(s_i\)</span> ⇒ 估计被放大 ⇒ 高方差、out-of-sample 极差。</li>
+<li>高度相关特征会产生小 <span class="math inline">\(s_i\)</span> — 金融常见（factor 多重共线性）。</li>
+</ul>
+<h3 id="ridge-regression-tikhonov-ell_2-罚">4.2 Ridge Regression (Tikhonov, <span class="math inline">\(\ell_2\)</span> 罚)</h3>
+<p><strong>惩罚形式</strong>： <span class="math display">\[\hat{\boldsymbol\theta}^{\text{rdg}}_\lambda = \arg\min_{\boldsymbol\theta}\|\mathbf y-\mathbf X\boldsymbol\theta\|_2^2 + \lambda\|\boldsymbol\theta\|_2^2\]</span></p>
+<p><strong>约束形式（等价）</strong>：<span class="math inline">\(\arg\min\|\mathbf y-\mathbf X\boldsymbol\theta\|^2 \text{ s.t. } \|\boldsymbol\theta\|_2^2\le T\)</span>。</p>
+<p><strong>闭式解</strong>： <span class="math display">\[\boxed{\hat{\boldsymbol\theta}^{\text{rdg}}_\lambda = (\mathbf X^\top\mathbf X + \lambda\mathbf I_p)^{-1}\mathbf X^\top\mathbf y}\]</span></p>
+<p><strong>SVD 视角</strong>：<span class="math inline">\(\hat{\boldsymbol\theta}^{\text{rdg}}_\lambda = \sum_i \frac{s_i}{s_i^2+\lambda}\mathbf v_i(\mathbf u_i^\top\mathbf y)\)</span>。每个奇异值方向被乘以 <span class="math inline">\(\frac{s_i^2}{s_i^2+\lambda}\)</span>（频率相关衰减）。</p>
+<p><strong>Kernel trick</strong>：<span class="math inline">\(\mathbf X^\top(\mathbf X\mathbf X^\top+\lambda\mathbf I_n)^{-1}\mathbf y = (\mathbf X^\top\mathbf X+\lambda\mathbf I_p)^{-1}\mathbf X^\top\mathbf y\)</span>。当 <span class="math inline">\(n&lt;p\)</span>（高维数据）用左式更便宜。</p>
+<p><strong>正交特例</strong>：<span class="math inline">\(\mathbf X^\top\mathbf X=\mathbf I_p \Rightarrow \hat{\boldsymbol\theta}^{\text{rdg}} = \tfrac{1}{1+\lambda}\hat{\boldsymbol\theta}^{\text{OLS}}\)</span>（统一线性收缩）。</p>
+<p><strong>偏差/方差</strong>： - <span class="math inline">\(\operatorname{Bias}(\hat{\boldsymbol\theta}^{\text{rdg}}_\lambda) = -\lambda(\mathbf X^\top\mathbf X+\lambda\mathbf I)^{-1}\boldsymbol\theta\)</span> - <span class="math inline">\(\operatorname{Var}(\hat{\boldsymbol\theta}^{\text{rdg}}_\lambda) = \sigma^2(\mathbf X^\top\mathbf X+\lambda\mathbf I)^{-2}\mathbf X^\top\mathbf X\)</span> - 极限：<span class="math inline">\(\lambda\to 0^+\)</span> → OLS；<span class="math inline">\(\lambda\to\infty\)</span> → <span class="math inline">\(\mathbf 0\)</span>。</p>
+<h3 id="lasso-ell_1-罚">4.3 Lasso (<span class="math inline">\(\ell_1\)</span> 罚)</h3>
+<p><span class="math display">\[\hat{\boldsymbol\theta}^{\text{lasso}}_\lambda = \arg\min_{\boldsymbol\theta}\|\mathbf y-\mathbf X\boldsymbol\theta\|_2^2 + \lambda\|\boldsymbol\theta\|_1\]</span></p>
+<ul>
+<li><span class="math inline">\(\ell_1\)</span> ball 有“角”，contour 与 ball 接触点常落在轴上 ⇒ <strong>稀疏解</strong>（自动 feature selection）。</li>
+<li>没有闭式解（需 coordinate descent / proximal / LARS）。</li>
+</ul>
+<p><strong>正交特例（soft-thresholding）</strong>： <span class="math display">\[\hat\theta^{\text{lasso}}_j = \operatorname{sign}(\hat\theta^{\text{OLS}}_j)\bigl(|\hat\theta^{\text{OLS}}_j|-\lambda\bigr)_+\]</span></p>
+<h3 id="ridge-vs-lasso-对照">4.4 Ridge vs Lasso 对照</h3>
+<table>
+<thead>
+<tr class="header">
+<th>特性</th>
+<th>Ridge</th>
+<th>Lasso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>罚</td>
+<td><span class="math inline">\(\ell_2\)</span></td>
+<td><span class="math inline">\(\ell_1\)</span></td>
+</tr>
+<tr class="even">
+<td>稀疏</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>闭式解</td>
+<td>✓</td>
+<td>✗</td>
+</tr>
+<tr class="even">
+<td>相关特征</td>
+<td>稳定（共同收缩）</td>
+<td>选择不稳定（任挑一个）</td>
+</tr>
+<tr class="odd">
+<td>解释性</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr class="even">
+<td>用法</td>
+<td>预测优先</td>
+<td>变量选择</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Elastic Net</strong>：<span class="math inline">\(\lambda_1\|\boldsymbol\theta\|_1+\lambda_2\|\boldsymbol\theta\|_2^2\)</span>（两全其美）。</p>
+<h3 id="数据预处理与-intercept">4.5 数据预处理与 Intercept</h3>
+<ul>
+<li><strong>必须先标准化特征</strong>（同尺度），否则不同尺度的系数被惩罚不一致。</li>
+<li>Intercept <strong>不加入惩罚</strong>（中心化数据后自动消失，或在 sklearn 用 <code>fit_intercept=True</code>）。</li>
+</ul>
+<h3 id="train-test-split-cross-validation">4.6 Train / Test Split &amp; Cross-Validation</h3>
+<p><strong>协议（必背）</strong>：</p>
+<ol type="1">
+<li>随机切 train (e.g. 80%) / test (20%)。</li>
+<li>在 <strong>train</strong> 上做 K-fold CV 选超参 <span class="math inline">\(\lambda\)</span>。</li>
+<li>用最优 <span class="math inline">\(\lambda\)</span> 在 <strong>完整 train</strong> 上重新训练。</li>
+<li><strong>最后</strong> 在 test 上评估一次（不重复评估！）。</li>
+</ol>
+<p><strong>K-fold 流程</strong>： - 把 train 平均分 <span class="math inline">\(K\)</span> 折；轮流取 1 折为 validation，其余为训练。 - 对每个候选 <span class="math inline">\(\lambda\)</span> 在 <span class="math inline">\(K\)</span> 次 fold 上的 validation error 取平均，选最小的 <span class="math inline">\(\hat\lambda_{\text{CV}}\)</span>。 - 常用 <span class="math inline">\(K=5\)</span> 或 <span class="math inline">\(K=10\)</span>；<span class="math inline">\(K=n\)</span> 时为 leave-one-out。</p>
+<p><strong>Test error 通常呈 U 型曲线</strong>（train error 单调下降）—— 防止 underfit / overfit。</p>
+<h3 id="关键-sklearn-代码">4.7 关键 sklearn 代码</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> Ridge, Lasso, RidgeCV, LassoCV, LinearRegression</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, KFold</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="co"># 1) split</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>    X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>, shuffle<span class="op">=</span><span class="va">True</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="co"># 2) scaler (fit on train ONLY)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>scaler <span class="op">=</span> StandardScaler().fit(X_train)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>X_train_s <span class="op">=</span> scaler.transform(X_train)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>X_test_s  <span class="op">=</span> scaler.transform(X_test)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a><span class="co"># 3) Ridge with CV</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>alphas <span class="op">=</span> np.logspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">50</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>cv <span class="op">=</span> KFold(n_splits<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">True</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>pipe <span class="op">=</span> Pipeline([</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>    (<span class="st">&quot;scaler&quot;</span>, StandardScaler()),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>    (<span class="st">&quot;regressor&quot;</span>, RidgeCV(alphas<span class="op">=</span>alphas, cv<span class="op">=</span>cv)),</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>])</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a>pipe.fit(X_train, y_train)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;best alpha:&quot;</span>, pipe.named_steps[<span class="st">&quot;regressor&quot;</span>].alpha_)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;test MSE :&quot;</span>, mean_squared_error(y_test, pipe.predict(X_test)))</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a><span class="co"># 4) plain Ridge / Lasso</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>ridge <span class="op">=</span> Ridge(alpha<span class="op">=</span><span class="fl">3.0</span>).fit(X_train_s, y_train)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>lasso <span class="op">=</span> Lasso(alpha<span class="op">=</span><span class="fl">0.1</span>).fit(X_train_s, y_train)</span></code></pre></div>
+<hr />
+<h2 id="lecture-5-classification-logistic-regression">Lecture 5 — Classification &amp; Logistic Regression</h2>
+<h3 id="任务设置">5.1 任务设置</h3>
+<ul>
+<li>目标 <span class="math inline">\(Y\in\{0,1\}\)</span>；条件分布 <span class="math inline">\(Y\mid\mathbf X\sim\text{Bernoulli}(p(\mathbf X))\)</span>。</li>
+<li>直接用 linear regression 的问题：预测可能 <span class="math inline">\(\notin[0,1]\)</span>；无概率解释。</li>
+</ul>
+<h3 id="logit-链接-模型">5.2 Logit 链接 &amp; 模型</h3>
+<p><strong>Sigmoid (logistic)</strong>: <span class="math inline">\(\sigma(z) = \dfrac{1}{1+e^{-z}} = \dfrac{e^z}{1+e^z}\)</span>。</p>
+<p><strong>Logit</strong>: <span class="math inline">\(g(t) = \log\!\dfrac{t}{1-t}\)</span>（<span class="math inline">\(\sigma\)</span> 的反函数）。</p>
+<p><strong>模型</strong>： <span class="math display">\[\log\!\frac{P(Y=1\mid\mathbf X)}{P(Y=0\mid\mathbf X)} = \beta_0 + \boldsymbol\beta^\top\mathbf X\]</span> 等价于 <span class="math inline">\(P(Y=1\mid\mathbf x) = \sigma(\mathbf x^\top\boldsymbol\beta)\)</span>。</p>
+<p><strong>其他链接</strong>：probit (<span class="math inline">\(\Phi\)</span>), cloglog (<span class="math inline">\(1-e^{-e^t}\)</span>)。</p>
+<h3 id="极大似然估计">5.3 极大似然估计</h3>
+<p><strong>Likelihood</strong>（标签 <span class="math inline">\(\in\{0,1\}\)</span>）： <span class="math display">\[\mathcal L_n(\boldsymbol\beta) = \prod_{i=1}^n p_{\boldsymbol\beta}(\mathbf x_i)^{y_i}(1-p_{\boldsymbol\beta}(\mathbf x_i))^{1-y_i}\]</span></p>
+<p><strong>Negative log-likelihood (NLL)</strong>： <span class="math display">\[\ell_n(\boldsymbol\beta) = -\frac{1}{n}\sum_i \bigl[y_i\,\mathbf x_i^\top\boldsymbol\beta - \log(1+e^{\mathbf x_i^\top\boldsymbol\beta})\bigr]\]</span></p>
+<p><strong>用 <span class="math inline">\(y_i\in\{-1,+1\}\)</span> 时更紧凑</strong>： <span class="math display">\[\ell_n(\boldsymbol\beta) = \frac{1}{n}\sum_i \log\!\bigl(1+e^{-y_i\,\mathbf x_i^\top\boldsymbol\beta}\bigr)\]</span></p>
+<p><strong>梯度</strong>：<span class="math inline">\(\nabla\ell_n(\boldsymbol\beta) = -\dfrac{1}{n}\sum_i \mathbf x_i\,(y_i-\sigma(\mathbf x_i^\top\boldsymbol\beta))\)</span>。</p>
+<p><strong>Hessian</strong> （重要：证明凸性）： <span class="math display">\[\nabla^2\ell_n(\boldsymbol\beta) = \frac{1}{n}\sum_i \sigma(\mathbf x_i^\top\boldsymbol\beta)(1-\sigma(\mathbf x_i^\top\boldsymbol\beta))\,\mathbf x_i\mathbf x_i^\top \succeq \mathbf 0\]</span></p>
+<p>⇒ NLL 是 <strong>凸函数</strong>；任何局部极小即全局。<br />
+⇒ NLL 是 <span class="math inline">\(L\)</span>-smooth，<span class="math inline">\(L = \tfrac{1}{4n}\lambda_{\max}\bigl(\sum_i \mathbf x_i\mathbf x_i^\top\bigr)\)</span>（因 <span class="math inline">\(\sigma(t)(1-\sigma(t))\le 1/4\)</span>）。</p>
+<h3 id="系数解释-odds-ratio">5.4 系数解释 — Odds Ratio</h3>
+<p><span class="math inline">\(\text{OR}_j = e^{\beta_j}\)</span>：<span class="math inline">\(X^{(j)}\)</span> 增加 1 单位时 odds 的乘性变化。</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\beta_j\)</span></th>
+<th>OR</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(&gt;0\)</span></td>
+<td><span class="math inline">\(&gt;1\)</span></td>
+<td>提高 odds</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=0\)</span></td>
+<td><span class="math inline">\(=1\)</span></td>
+<td>无影响</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(&lt;0\)</span></td>
+<td><span class="math inline">\(&lt;1\)</span></td>
+<td>降低 odds</td>
+</tr>
+</tbody>
+</table>
+<p><strong>陷阱</strong>：odds ratio ≠ probability ratio（仅在概率很小时近似相等）。</p>
+<h3 id="分类指标">5.5 分类指标</h3>
+<p><strong>Confusion matrix</strong>（二分类）：</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Predicted 0</th>
+<th>Predicted 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Actual 0</td>
+<td>TN</td>
+<td>FP</td>
+</tr>
+<tr class="even">
+<td>Actual 1</td>
+<td>FN</td>
+<td>TP</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>指标</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td><span class="math inline">\(\dfrac{TP+TN}{TP+TN+FP+FN}\)</span></td>
+</tr>
+<tr class="even">
+<td>Misclassification rate</td>
+<td><span class="math inline">\(1-\)</span>Accuracy</td>
+</tr>
+<tr class="odd">
+<td>Sensitivity = Recall = TPR</td>
+<td><span class="math inline">\(\dfrac{TP}{TP+FN}\)</span></td>
+</tr>
+<tr class="even">
+<td>Specificity</td>
+<td><span class="math inline">\(\dfrac{TN}{TN+FP}\)</span></td>
+</tr>
+<tr class="odd">
+<td>FPR</td>
+<td><span class="math inline">\(1-\)</span>Specificity <span class="math inline">\(= \dfrac{FP}{FP+TN}\)</span></td>
+</tr>
+<tr class="even">
+<td>Precision</td>
+<td><span class="math inline">\(\dfrac{TP}{TP+FP}\)</span></td>
+</tr>
+<tr class="odd">
+<td>F1</td>
+<td><span class="math inline">\(2\cdot\dfrac{P\cdot R}{P+R}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ROC &amp; AUC</strong>： - 改变阈值 <span class="math inline">\(\tau\)</span>（决策规则 <span class="math inline">\(\hat y=\mathbf 1\{p\ge\tau\}\)</span>），画 (FPR, TPR) 曲线。 - AUC = ROC 下面积；越接近 1 越好；<span class="math inline">\(0.5\)</span> = 随机。</p>
+<h3 id="高维-正则化逻辑回归">5.6 高维 / 正则化逻辑回归</h3>
+<p><span class="math display">\[\arg\min_{\boldsymbol\beta} \frac{1}{n}\sum_i \log(1+e^{-y_i\mathbf x_i^\top\boldsymbol\beta}) + \text{pen}(\boldsymbol\beta)\]</span></p>
+<ul>
+<li>罚项：<span class="math inline">\(\lambda\|\boldsymbol\beta\|_2^2\)</span>（Ridge），<span class="math inline">\(\lambda\|\boldsymbol\beta\|_1\)</span>（Lasso），Elastic Net。</li>
+<li>在 sklearn 中 <code>LogisticRegression(C=1/lambda, penalty='l2'|'l1'|'elasticnet')</code>。</li>
+</ul>
+<h3 id="generalized-linear-models-glm">5.7 Generalized Linear Models (GLM)</h3>
+<p>三件套： 1. Random component: <span class="math inline">\(Y_i\sim\)</span> exponential family，<span class="math inline">\(\mathbb E[Y_i]=\mu_i\)</span>。 2. Linear predictor: <span class="math inline">\(\eta_i = \mathbf x_i^\top\boldsymbol\beta\)</span>。 3. Link function: <span class="math inline">\(g(\mu_i) = \eta_i\)</span>。</p>
+<table>
+<thead>
+<tr class="header">
+<th>模型</th>
+<th>分布</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>线性回归</td>
+<td>Gaussian</td>
+<td>identity</td>
+</tr>
+<tr class="even">
+<td>逻辑回归</td>
+<td>Bernoulli</td>
+<td>logit</td>
+</tr>
+<tr class="odd">
+<td>Poisson 回归</td>
+<td>Poisson</td>
+<td>log</td>
+</tr>
+</tbody>
+</table>
+<h3 id="关键代码">5.8 关键代码</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score, confusion_matrix, roc_auc_score, roc_curve, classification_report</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>clf <span class="op">=</span> LogisticRegression(C<span class="op">=</span><span class="fl">1.0</span>, penalty<span class="op">=</span><span class="st">&quot;l2&quot;</span>, solver<span class="op">=</span><span class="st">&quot;lbfgs&quot;</span>, max_iter<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>clf.fit(X_train, y_train)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>y_pred  <span class="op">=</span> clf.predict(X_test)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>y_proba <span class="op">=</span> clf.predict_proba(X_test)[:, <span class="dv">1</span>]</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="bu">print</span>(confusion_matrix(y_test, y_pred))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a><span class="bu">print</span>(classification_report(y_test, y_pred))</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>auc <span class="op">=</span> roc_auc_score(y_test, y_proba)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>fpr, tpr, _ <span class="op">=</span> roc_curve(y_test, y_proba)</span></code></pre></div>
+<hr />
+<h2 id="lecture-6-optimization-for-ml">Lecture 6 — Optimization for ML</h2>
+<h3 id="为何需要优化算法">6.1 为何需要优化算法</h3>
+<p>Naive grid search 在 <span class="math inline">\(d\)</span> 维 <span class="math inline">\([0,1]^d\)</span> 上需 <span class="math inline">\((1/\varepsilon)^d\)</span> 次评估，<span class="math inline">\(d=100,\varepsilon=0.1\)</span> 已经 <span class="math inline">\(10^{100}\)</span> — 不可行。<br />
+解析解仅对 OLS 等少数模型存在，逻辑回归等需迭代算法。</p>
+<h3 id="凸性与平滑性">6.2 凸性与平滑性</h3>
+<ul>
+<li><span class="math inline">\(f\)</span> 凸 ⇔ <span class="math inline">\(\nabla^2 f\succeq 0\)</span>（如果二次可导）。凸函数局部最小 = 全局最小。</li>
+<li><span class="math inline">\(f\)</span> 是 <strong><span class="math inline">\(L\)</span>-smooth</strong> ⇔ 梯度 <span class="math inline">\(L\)</span>-Lipschitz ⇔ <span class="math inline">\(\lambda_{\max}(\nabla^2 f)\le L\)</span>。</li>
+</ul>
+<h3 id="descent-lemma梯度下降的核心">6.3 Descent Lemma（梯度下降的核心）</h3>
+<p>若 <span class="math inline">\(f\)</span> 是 <span class="math inline">\(L\)</span>-smooth： <span class="math display">\[f(\boldsymbol\beta&#39;) \le f(\boldsymbol\beta) + \langle\nabla f(\boldsymbol\beta),\boldsymbol\beta&#39;-\boldsymbol\beta\rangle + \frac{L}{2}\|\boldsymbol\beta&#39;-\boldsymbol\beta\|^2\]</span></p>
+<p>最小化右边的二次模型 ⇒ 步长 <span class="math inline">\(\eta = 1/L\)</span>，得到 GD 更新。</p>
+<h3 id="batch-gradient-descent">6.4 (Batch) Gradient Descent</h3>
+<p><span class="math display">\[\boxed{\boldsymbol\beta^{(k+1)} = \boldsymbol\beta^{(k)} - \eta\,\nabla f(\boldsymbol\beta^{(k)})}\]</span></p>
+<ul>
+<li>每步成本 <span class="math inline">\(O(nd)\)</span>（一个完整数据 pass）。</li>
+<li>对凸 + <span class="math inline">\(L\)</span>-smooth 函数收敛速率 <span class="math inline">\(O(1/k)\)</span>；强凸时 <span class="math inline">\(O(\rho^k)\)</span>（线性）。</li>
+</ul>
+<h3 id="stochastic-gradient-descent-sgd">6.5 Stochastic Gradient Descent (SGD)</h3>
+<p>把目标写为 <span class="math inline">\(f(\boldsymbol\beta) = \frac{1}{n}\sum_{i=1}^n f_i(\boldsymbol\beta)\)</span>。</p>
+<p><span class="math display">\[\boldsymbol\beta^{(k+1)} = \boldsymbol\beta^{(k)} - \eta_k\,\nabla f_{i_k}(\boldsymbol\beta^{(k)}),\quad i_k\overset{\text{unif}}{\sim}\{1,\dots,n\}\]</span></p>
+<ul>
+<li>每步成本 <span class="math inline">\(O(d)\)</span>（仅一个样本）。</li>
+<li>步长一般递减（如 <span class="math inline">\(\eta_k = \eta/\sqrt{k}\)</span> 或 schedule <span class="math inline">\(\eta(t) = t_0/(t+t_1)\)</span>）保证收敛。</li>
+<li>收敛是噪声 trajectory，不沿严格下降方向。</li>
+</ul>
+<h3 id="mini-batch-gd">6.6 Mini-batch GD</h3>
+<p>每步用大小为 <span class="math inline">\(B\)</span> 的 mini-batch（典型 32 / 64 / 128 / 256）： <span class="math display">\[\nabla\hat f = \frac{1}{B}\sum_{i\in\text{batch}}\nabla f_i(\boldsymbol\beta)\]</span></p>
+<ul>
+<li>折中：方差比 SGD 小，比 BGD 便宜。</li>
+<li>利用 vectorization &amp; GPU 并行，是深度学习的默认。</li>
+</ul>
+<h3 id="三种-gd-路径对比linear-regression">6.7 三种 GD 路径对比（Linear regression）</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co"># Batch GD</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(n_epochs):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    grads <span class="op">=</span> X_b.T <span class="op">@</span> (X_b <span class="op">@</span> theta <span class="op">-</span> y) <span class="op">/</span> m</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    theta <span class="op">=</span> theta <span class="op">-</span> eta <span class="op">*</span> grads</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="co"># SGD</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(n_epochs):</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(m):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>        idx <span class="op">=</span> rng.integers(m)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>        xi, yi <span class="op">=</span> X_b[idx:idx<span class="op">+</span><span class="dv">1</span>], y[idx:idx<span class="op">+</span><span class="dv">1</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>        grads <span class="op">=</span> xi.T <span class="op">@</span> (xi <span class="op">@</span> theta <span class="op">-</span> yi)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>        eta <span class="op">=</span> t0<span class="op">/</span>(epoch<span class="op">*</span>m <span class="op">+</span> i <span class="op">+</span> t1)            <span class="co"># learning schedule</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>        theta <span class="op">=</span> theta <span class="op">-</span> eta <span class="op">*</span> grads</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a><span class="co"># Mini-batch GD</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(n_epochs):</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>    perm <span class="op">=</span> rng.permutation(m)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, m, B):</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a>        idx <span class="op">=</span> perm[k:k<span class="op">+</span>B]</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a>        grads <span class="op">=</span> X_b[idx].T <span class="op">@</span> (X_b[idx] <span class="op">@</span> theta <span class="op">-</span> y[idx]) <span class="op">/</span> B</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>        theta <span class="op">=</span> theta <span class="op">-</span> eta <span class="op">*</span> grads</span></code></pre></div>
+<h3 id="逻辑回归的-gd套用上面-nll-的梯度">6.8 逻辑回归的 GD（套用上面 NLL 的梯度）</h3>
+<p><span class="math display">\[\nabla\ell_n(\boldsymbol\beta) = \frac{1}{n}\sum_i \bigl(\sigma(\mathbf x_i^\top\boldsymbol\beta) - y_i\bigr)\mathbf x_i\]</span></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n_iter):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    z <span class="op">=</span> X <span class="op">@</span> beta                  <span class="co"># (n,)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    p <span class="op">=</span> <span class="fl">1.0</span> <span class="op">/</span> (<span class="fl">1.0</span> <span class="op">+</span> np.exp(<span class="op">-</span>z))  <span class="co"># sigmoid</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    grad <span class="op">=</span> X.T <span class="op">@</span> (p <span class="op">-</span> y) <span class="op">/</span> n</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    beta <span class="op">-=</span> eta <span class="op">*</span> grad</span></code></pre></div>
+<hr />
+<h2 id="lecture-7-pca">Lecture 7 — PCA</h2>
+<h3 id="目的">7.1 目的</h3>
+<p><strong>Principal Component Analysis</strong> 寻找正交方向使投影后方差最大化： - 可视化（高维 → 2D / 3D） - 去噪（投影到 top-<span class="math inline">\(k\)</span> 子空间再重构） - 压缩 / 加速下游模型 - 特征提取（金融中的“风险因子”）</p>
+<h3 id="数学公式">7.2 数学公式</h3>
+<p>设中心化数据 <span class="math inline">\(\mathbf Y = \mathbf X - \mathbf 1\mathbf g^\top\)</span>，<span class="math inline">\(\mathbf g\)</span> 为列均值。协方差矩阵： <span class="math display">\[\boldsymbol\Sigma = \tfrac{1}{n}\mathbf Y^\top\mathbf Y\]</span></p>
+<p><strong>第一主轴</strong>： <span class="math display">\[\mathbf v_1 = \arg\max_{\|\mathbf v\|=1}\sum_i (\mathbf y_i^\top\mathbf v)^2 = \arg\max_{\|\mathbf v\|=1} \mathbf v^\top \boldsymbol\Sigma \mathbf v\]</span></p>
+<p>用 Lagrange 法 ⇒ <span class="math inline">\(\boldsymbol\Sigma\mathbf v_1 = \lambda_1\mathbf v_1\)</span>（<strong><span class="math inline">\(\boldsymbol\Sigma\)</span> 的最大特征向量</strong>）。</p>
+<p><strong>所有主成分</strong>：<span class="math inline">\(\boldsymbol\Sigma\mathbf v_i = \lambda_i\mathbf v_i,\ \lambda_1\ge\lambda_2\ge\dots\ge 0\)</span>。<br />
+<span class="math inline">\(\mathbf v_k\)</span> 在所有与 <span class="math inline">\(\{\mathbf v_1,\dots,\mathbf v_{k-1}\}\)</span> 正交的方向中方差最大。<br />
+<strong>Variance explained</strong> by <span class="math inline">\(\mathbf v_k\)</span> = <span class="math inline">\(\lambda_k\)</span>。</p>
+<h3 id="投影与重构">7.3 投影与重构</h3>
+<ul>
+<li>主成分得分（scores）：<span class="math inline">\(\mathbf c_j = \mathbf Y\mathbf v_j\)</span>，矩阵形式 <span class="math inline">\(\mathbf C = \mathbf Y\mathbf V\)</span>。</li>
+<li>取前 <span class="math inline">\(k\)</span> 个：<span class="math inline">\(\mathbf C_k = \mathbf Y\mathbf V_k\)</span>，<span class="math inline">\(\mathbf V_k = [\mathbf v_1,\dots,\mathbf v_k]\)</span>。</li>
+<li>重构：<span class="math inline">\(\hat{\mathbf Y} = \mathbf C_k\mathbf V_k^\top = \mathbf Y\mathbf V_k\mathbf V_k^\top\)</span>（rank-<span class="math inline">\(k\)</span> 最佳逼近）。</li>
+</ul>
+<h3 id="标准化-pca">7.4 标准化 PCA</h3>
+<p>变量尺度不一致时（金融中常见）： <span class="math display">\[z_i^j = \frac{x_i^j - \bar x^j}{s^j},\qquad s^j = \sqrt{\sigma_j^2}\]</span></p>
+<p>对 <span class="math inline">\(\mathbf Z\)</span> 做 PCA，其协方差 $= Z^Z = $ <strong>相关矩阵</strong>。<br />
+所有变量单位方差，PCA 不被高方差特征主导。</p>
+<h3 id="pca-与-svd-的关系关键">7.5 PCA 与 SVD 的关系（关键）</h3>
+<p><span class="math inline">\(\mathbf Y = \mathbf U\boldsymbol\Sigma\mathbf V^\top\)</span> ⇒ - <span class="math inline">\(\mathbf V\)</span> 的列 = 主轴（特征向量 of <span class="math inline">\(\mathbf Y^\top\mathbf Y\)</span>） - <span class="math inline">\(\lambda_j = s_j^2 / n\)</span>（<span class="math inline">\(\boldsymbol\Sigma_{\text{cov}}\)</span> 的特征值） - 主成分得分 = <span class="math inline">\(\mathbf Y\mathbf V = \mathbf U\boldsymbol\Sigma\)</span></p>
+<p><strong>为什么走 SVD</strong>：避免显式构造 <span class="math inline">\(\mathbf Y^\top\mathbf Y\)</span>（贵 + 数值不稳）；对高维只需算 truncated SVD（前 <span class="math inline">\(k\)</span> 个奇异向量）。sklearn 的 <code>PCA</code> 就是基于 SVD。</p>
+<h3 id="选择-k">7.6 选择 <span class="math inline">\(k\)</span></h3>
+<ul>
+<li><strong>Scree plot</strong>（肘部 / elbow 法）：寻找特征值衰减的拐点。</li>
+<li><strong>Kaiser 准则</strong>（标准化 PCA 中）：保留 <span class="math inline">\(\lambda_k &gt; 1\)</span> 的成分。</li>
+<li><strong>累积解释方差比</strong>： <span class="math display">\[I_k = \frac{\sum_{j=1}^k \lambda_j}{\sum_{j=1}^p \lambda_j}\;\;(\text{e.g. } I_k\ge 0.9)\]</span></li>
+<li><strong>任务驱动</strong>：用 CV 在下游模型上选 <span class="math inline">\(k\)</span>。</li>
+</ul>
+<h3 id="表现质量">7.7 表现质量</h3>
+<ul>
+<li><strong>个体的表现</strong>：$^2(z_i,v_k) = $ 个体在第 <span class="math inline">\(k\)</span> 主轴上的投影占其总方差的比例。</li>
+<li><strong>变量的表现</strong>：<span class="math inline">\(r(\mathbf c_k,\mathbf z_j) = \sqrt{\lambda_k}\,v_{j,k}\)</span>。</li>
+<li>标准化 PCA 中 <span class="math inline">\(\sum_{j=1}^p \lambda_j = p\)</span>。</li>
+</ul>
+<h3 id="金融应用yield-curve-pca">7.8 金融应用：Yield Curve PCA</h3>
+<p>对一组 swap rates / yield 收益率（每行一天，每列一个 maturity）做 PCA： 1. <strong>PC1 ≈ Level</strong>（曲线整体平移），通常解释 70-80%。 2. <strong>PC2 ≈ Slope</strong>（短端 vs 长端反向）。 3. <strong>PC3 ≈ Curvature</strong>（中部 vs 两端）。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="co"># data: shape (T_days, n_maturities)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>mu  <span class="op">=</span> data.mean(axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>Y   <span class="op">=</span> data <span class="op">-</span> mu</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>cov <span class="op">=</span> (Y.T <span class="op">@</span> Y) <span class="op">/</span> Y.shape[<span class="dv">0</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>U, S, _ <span class="op">=</span> np.linalg.svd(cov)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>explained <span class="op">=</span> S <span class="op">/</span> S.<span class="bu">sum</span>()                          <span class="co"># variance ratio</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>loadings  <span class="op">=</span> U[:, :<span class="dv">3</span>]                              <span class="co"># PC1-3 loadings (level/slope/curvature)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>scores    <span class="op">=</span> Y <span class="op">@</span> U[:, :<span class="dv">3</span>]                          <span class="co"># daily scores</span></span></code></pre></div>
+<h3 id="sklearn-模板">7.9 sklearn 模板</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>Z <span class="op">=</span> StandardScaler().fit_transform(X)            <span class="co"># 标准化（推荐）</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">3</span>)                        <span class="co"># 或 0.95 = 累计 95% 方差</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>scores <span class="op">=</span> pca.fit_transform(Z)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>pca.explained_variance_                          <span class="co"># = lambda_k</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>pca.explained_variance_ratio_                    <span class="co"># = lambda_k / sum</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>pca.components_                                   <span class="co"># 主轴矩阵 V^T (k, p)</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>X_reconstructed <span class="op">=</span> pca.inverse_transform(scores)</span></code></pre></div>
+<hr />
+<h2 id="lecture-8-k-means-gaussian-mixture-models">Lecture 8 — K-Means &amp; Gaussian Mixture Models</h2>
+<h3 id="k-means目标函数">8.1 K-Means：目标函数</h3>
+<p>数据点 <span class="math inline">\(\mathbf x_i\in\mathbb R^K\)</span>；目标找质心 <span class="math inline">\(\mathbf c_1,\dots,\mathbf c_Q\)</span> 最小化 <strong>量化误差</strong>： <span class="math display">\[J(\mathbf c_1,\dots,\mathbf c_Q) = \sum_{i=1}^I \min_{q=1,\dots,Q}\|\mathbf x_i-\mathbf c_q\|_2^2\]</span></p>
+<blockquote>
+<p>全局最优 NP-hard（<span class="math inline">\(Q^I\)</span> 种分配）。Lloyd 算法只能局部最优。</p>
+</blockquote>
+<h3 id="lloyd-算法">8.2 Lloyd 算法</h3>
+<ol type="1">
+<li>初始化 <span class="math inline">\(\{\mathbf c_1,\dots,\mathbf c_Q\}\)</span>。</li>
+<li><strong>Assignment</strong>：<span class="math inline">\(\mathcal C_q = \{i: q = \arg\min_{q&#39;} \|\mathbf x_i-\mathbf c_{q&#39;}\|^2\}\)</span>。</li>
+<li><strong>Update</strong>：<span class="math inline">\(\mathbf c_q = \dfrac{1}{|\mathcal C_q|}\sum_{i\in\mathcal C_q}\mathbf x_i\)</span>。</li>
+<li>重复 2–3 直到 <span class="math inline">\(\mathcal C_q\)</span> 不变。</li>
+</ol>
+<p>每步严格不增加 <span class="math inline">\(J\)</span> ⇒ 单调收敛到局部极小。</p>
+<p><strong>复杂度</strong>：<span class="math inline">\(O(Q\cdot n\cdot I\cdot s)\)</span>（<span class="math inline">\(I\)</span> 迭代数，<span class="math inline">\(s\)</span> 距离计算成本）。</p>
+<h3 id="初始化方法">8.3 初始化方法</h3>
+<ul>
+<li><strong>随机选 <span class="math inline">\(Q\)</span> 个点</strong>：可能差。</li>
+<li><strong>Farthest-point</strong>：先随机一个，再每次选离已选点最远的。对 outlier 敏感。</li>
+<li><strong>K-means++</strong>（推荐）：
+<ol type="1">
+<li>均匀随机选 <span class="math inline">\(\mathbf c_1\)</span>。</li>
+<li>后续每次按 <span class="math inline">\(\Pr(\mathbf x_i)\propto \min_{q&#39;&lt;q}\|\mathbf x_i-\mathbf c_{q&#39;}\|^2\)</span> 加权采样。</li>
+<li>期望意义上 <span class="math inline">\(\mathbb E[J]\le 8(\log Q+2)\,J^*\)</span>（Arthur–Vassilvitskii 2006）。</li>
+</ol></li>
+</ul>
+<h3 id="选-q">8.4 选 <span class="math inline">\(Q\)</span></h3>
+<ul>
+<li><strong>Elbow method</strong>：画 inertia <span class="math inline">\(J\)</span> vs <span class="math inline">\(Q\)</span> 曲线，看拐点。</li>
+<li><strong>Silhouette score</strong>（<span class="math inline">\(\in[-1,1]\)</span>，越大越好）。</li>
+<li><strong>Gap statistic</strong> / <strong>Davies-Bouldin</strong> 等。</li>
+</ul>
+<h3 id="gaussian-mixture-models-gmm">8.5 Gaussian Mixture Models (GMM)</h3>
+<p>K 个高斯成分的线性组合： <span class="math display">\[p(\mathbf x) = \sum_{k=1}^K \pi_k\,\mathcal N(\mathbf x\mid\boldsymbol\mu_k,\boldsymbol\Sigma_k),\quad \sum_k \pi_k=1,\ \pi_k\ge 0\]</span></p>
+<p><strong>潜变量表示</strong>（1-of-K）：<span class="math inline">\(\mathbf z\in\{0,1\}^K,\ \sum z_k=1\)</span>；<span class="math inline">\(p(z_k=1)=\pi_k\)</span>；<span class="math inline">\(p(\mathbf x\mid z_k=1)=\mathcal N(\boldsymbol\mu_k,\boldsymbol\Sigma_k)\)</span>。</p>
+<p><strong>Responsibility</strong>（关键）： <span class="math display">\[\gamma(z_{nk}) = p(z_k=1\mid\mathbf x_n) = \frac{\pi_k\mathcal N(\mathbf x_n\mid\boldsymbol\mu_k,\boldsymbol\Sigma_k)}{\sum_j \pi_j\mathcal N(\mathbf x_n\mid\boldsymbol\mu_j,\boldsymbol\Sigma_j)}\]</span></p>
+<h3 id="em-算法-for-gmm">8.6 EM 算法 for GMM</h3>
+<p>直接最大化 log-likelihood <span class="math inline">\(\sum_n\log\sum_k\pi_k\mathcal N(\dots)\)</span> 没有闭式解（log 内有 sum）。EM 提供迭代方案。</p>
+<p><strong>Algorithm</strong>：</p>
+<ol type="1">
+<li>初始化 <span class="math inline">\(\boldsymbol\mu_k,\boldsymbol\Sigma_k,\pi_k\)</span>。</li>
+<li><strong>E-step</strong>：用当前参数计算 <span class="math inline">\(\gamma(z_{nk})\)</span>。</li>
+<li><strong>M-step</strong>（更新参数）： <span class="math display">\[\boxed{\begin{aligned}
+N_k &amp;= \sum_{n=1}^N \gamma(z_{nk})\\
+\boldsymbol\mu_k^{\text{new}} &amp;= \frac{1}{N_k}\sum_n \gamma(z_{nk})\mathbf x_n\\
+\boldsymbol\Sigma_k^{\text{new}} &amp;= \frac{1}{N_k}\sum_n \gamma(z_{nk})(\mathbf x_n-\boldsymbol\mu_k^{\text{new}})(\mathbf x_n-\boldsymbol\mu_k^{\text{new}})^\top\\
+\pi_k^{\text{new}} &amp;= \frac{N_k}{N}
+\end{aligned}}\]</span></li>
+<li>计算 log-likelihood，未收敛回 2。</li>
+</ol>
+<p><strong>性质</strong>：单调不减（log-lik 不会下降），但只保证局部最优；GMM log-likelihood 非凸。</p>
+<p><strong>实践小贴士</strong>： - 用 K-means 结果初始化 EM 加速收敛（簇均值 → <span class="math inline">\(\boldsymbol\mu_k\)</span>，簇 cov → <span class="math inline">\(\boldsymbol\Sigma_k\)</span>，簇比例 → <span class="math inline">\(\pi_k\)</span>）。 - 协方差可能退化（奇异），常加 regularization <span class="math inline">\(\boldsymbol\Sigma_k + \varepsilon\mathbf I\)</span>。</p>
+<h3 id="k-means-vs-gmm">8.7 K-Means vs GMM</h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>K-Means</th>
+<th>GMM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>簇形状</td>
+<td>球形</td>
+<td>椭圆（任意协方差）</td>
+</tr>
+<tr class="even">
+<td>分配</td>
+<td>硬（hard）</td>
+<td>软（responsibilities）</td>
+</tr>
+<tr class="odd">
+<td>优化</td>
+<td>Lloyd</td>
+<td>EM</td>
+</tr>
+<tr class="even">
+<td>复杂度</td>
+<td>低</td>
+<td>较高（每次计算 cov）</td>
+</tr>
+<tr class="odd">
+<td>概率模型</td>
+<td>否</td>
+<td>是（可计算密度）</td>
+</tr>
+<tr class="even">
+<td>对偏离球形敏感</td>
+<td>是</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p>K-Means 可视为 GMM 的极限：<span class="math inline">\(\boldsymbol\Sigma_k = \sigma^2\mathbf I,\ \sigma\to 0\)</span>。</p>
+<h3 id="关键代码-1">8.8 关键代码</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="im">from</span> sklearn.mixture <span class="im">import</span> GaussianMixture</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, init<span class="op">=</span><span class="st">&#39;k-means++&#39;</span>, n_init<span class="op">=</span><span class="dv">10</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>labels <span class="op">=</span> km.fit_predict(X)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>km.cluster_centers_, km.inertia_</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>gmm <span class="op">=</span> GaussianMixture(n_components<span class="op">=</span><span class="dv">3</span>, covariance_type<span class="op">=</span><span class="st">&#39;full&#39;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>                      init_params<span class="op">=</span><span class="st">&#39;kmeans&#39;</span>, random_state<span class="op">=</span><span class="dv">0</span>).fit(X)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>gmm.weights_, gmm.means_, gmm.covariances_</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>soft_assign <span class="op">=</span> gmm.predict_proba(X)               <span class="co"># responsibilities</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>log_density <span class="op">=</span> gmm.score_samples(X)               <span class="co"># log p(x)</span></span></code></pre></div>
+<h3 id="pca-k-means-on-stock-returnslab">8.9 PCA + K-Means on Stock Returns（lab）</h3>
+<p>经典流程：先 PCA 把 daily returns 矩阵降维，然后对资产做 K-Means 聚类；簇内股票通常属于相同行业/风险因子。</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>returns <span class="op">=</span> prices.pct_change().dropna()           <span class="co"># T × N</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>Z <span class="op">=</span> StandardScaler().fit_transform(returns.T)    <span class="co"># 资产为行</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">5</span>).fit(Z)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>features <span class="op">=</span> pca.transform(Z)                       <span class="co"># 资产 × 5 维</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>labels <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">8</span>, random_state<span class="op">=</span><span class="dv">0</span>).fit_predict(features)</span></code></pre></div>
+<hr />
+<h2 id="lecture-9-neural-networks-pytorch">Lecture 9 — Neural Networks &amp; PyTorch</h2>
+<blockquote>
+<p>这一章主要在 notebook 里，slides 内容较少，复习以代码 + 概念为主。</p>
+</blockquote>
+<h3 id="神经网络基本概念">9.1 神经网络基本概念</h3>
+<p><strong>单个 neuron</strong>： <span class="math display">\[y = f\!\left(\sum_i w_i x_i + b\right) = f(\mathbf w^\top\mathbf x + b)\]</span> 其中 <span class="math inline">\(f\)</span> 是 <strong>activation function</strong>。</p>
+<p><strong>多层网络（MLP / 全连接）</strong>： <span class="math display">\[\mathbf h = f_1(\mathbf x\mathbf W_1 + \mathbf b_1),\quad \mathbf y = f_2(\mathbf h\mathbf W_2 + \mathbf b_2)\]</span></p>
+<p><strong>Hyperparameters</strong>：层数、每层 unit 数、激活函数、学习率、batch size、epochs。</p>
+<h3 id="activation-functions">9.2 Activation Functions</h3>
+<table>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>公式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sigmoid</td>
+<td><span class="math inline">\(\sigma(z) = 1/(1+e^{-z})\)</span></td>
+<td>输出 <span class="math inline">\((0,1)\)</span>；梯度饱和；二分类输出层</td>
+</tr>
+<tr class="even">
+<td>Tanh</td>
+<td><span class="math inline">\(\tanh(z)\)</span></td>
+<td>输出 <span class="math inline">\((-1,1)\)</span>；零中心；仍饱和</td>
+</tr>
+<tr class="odd">
+<td>ReLU</td>
+<td><span class="math inline">\(\max(0,z)\)</span></td>
+<td>计算便宜；隐藏层默认；可能 dead neurons</td>
+</tr>
+<tr class="even">
+<td>Softmax</td>
+<td><span class="math inline">\(\sigma_i = e^{z_i}/\sum_j e^{z_j}\)</span></td>
+<td>多分类输出层；总和为 1</td>
+</tr>
+<tr class="odd">
+<td>LogSoftmax</td>
+<td><span class="math inline">\(\log\sigma_i\)</span></td>
+<td>数值更稳；与 NLLLoss 配套</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>重要</strong>：必须有非线性激活，否则多层网络等价单层线性映射。</p>
+</blockquote>
+<h3 id="loss-functions">9.3 Loss Functions</h3>
+<table>
+<thead>
+<tr class="header">
+<th>任务</th>
+<th>Loss</th>
+<th>PyTorch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>回归</td>
+<td>MSE: <span class="math inline">\(\frac{1}{2n}\sum(y-\hat y)^2\)</span></td>
+<td><code>nn.MSELoss()</code></td>
+</tr>
+<tr class="even">
+<td>二分类（logits）</td>
+<td>BCE with logits</td>
+<td><code>nn.BCEWithLogitsLoss()</code></td>
+</tr>
+<tr class="odd">
+<td>多分类（logits）</td>
+<td>Cross-entropy</td>
+<td><code>nn.CrossEntropyLoss()</code></td>
+</tr>
+<tr class="even">
+<td>多分类（log-prob）</td>
+<td>NLL</td>
+<td><code>nn.NLLLoss()</code> (配合 <code>LogSoftmax</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cross-entropy</strong> 推导（多分类）： <span class="math display">\[\mathcal L = -\sum_i \sum_k y_{ik}\log\hat p_{ik},\quad \hat p_{ik}=\text{softmax}(z_i)_k\]</span></p>
+<h3 id="pytorch-tensors与-numpy-类似">9.4 PyTorch Tensors（与 NumPy 类似）</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="im">import</span> torch</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>torch.manual_seed(<span class="dv">0</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>x <span class="op">=</span> torch.rand(<span class="dv">7</span>, <span class="dv">7</span>)             <span class="co"># uniform [0,1)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>torch.randn(<span class="dv">7</span>, <span class="dv">7</span>)                <span class="co"># standard normal</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>torch.normal(<span class="dv">0</span>, <span class="dv">1</span>, size<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">7</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>torch.zeros(<span class="dv">3</span>)<span class="op">;</span> torch.ones(<span class="dv">3</span>)<span class="op">;</span> torch.eye(<span class="dv">3</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a><span class="co"># 形状操作</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a>x.shape<span class="op">;</span> x.view(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)<span class="op">;</span> x.reshape(<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true"></a>x.squeeze()<span class="op">;</span> x.unsqueeze(<span class="dv">0</span>)<span class="op">;</span> x.flatten()<span class="op">;</span> x.T</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true"></a><span class="co"># 矩阵乘法</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true"></a>z <span class="op">=</span> x <span class="op">@</span> y.T          <span class="co"># 或 torch.matmul(x, y.T) / torch.mm(x, y.T)</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true"></a><span class="co"># numpy ↔ torch</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true"></a>b <span class="op">=</span> torch.from_numpy(a)<span class="op">;</span> b.numpy()    <span class="co"># 共享内存</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true"></a><span class="co"># device</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">&quot;cpu&quot;</span>)  <span class="co"># 或 &quot;mps&quot;</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true"></a>x <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">3</span>).to(device)</span></code></pre></div>
+<h3 id="单多层前向手算">9.5 单/多层前向手算</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="co"># 单层 (1, 5) 输入：</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>features <span class="op">=</span> torch.randn((<span class="dv">1</span>, <span class="dv">5</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>weights  <span class="op">=</span> torch.randn_like(features)        <span class="co"># (1, 5)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>bias     <span class="op">=</span> torch.randn((<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>y <span class="op">=</span> torch.sigmoid(features <span class="op">@</span> weights.T <span class="op">+</span> bias)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a><span class="co"># 两层：(1, 3) → 隐藏 2 → 输出 1</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a>W1 <span class="op">=</span> torch.randn(<span class="dv">3</span>, <span class="dv">2</span>)<span class="op">;</span>  B1 <span class="op">=</span> torch.randn((<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a>W2 <span class="op">=</span> torch.randn(<span class="dv">2</span>, <span class="dv">1</span>)<span class="op">;</span>  B2 <span class="op">=</span> torch.randn((<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true"></a>h <span class="op">=</span> torch.sigmoid(features <span class="op">@</span> W1 <span class="op">+</span> B1)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true"></a>y <span class="op">=</span> torch.sigmoid(h <span class="op">@</span> W2 <span class="op">+</span> B2)</span></code></pre></div>
+<h3 id="用-nn.module-构建网络">9.6 用 <code>nn.Module</code> 构建网络</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="im">import</span> torch.nn.functional <span class="im">as</span> F</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a><span class="kw">class</span> Network(nn.Module):</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(<span class="dv">784</span>, <span class="dv">128</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(<span class="dv">128</span>, <span class="dv">64</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true"></a>        <span class="va">self</span>.fc3 <span class="op">=</span> nn.Linear(<span class="dv">64</span>, <span class="dv">10</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc1(x))</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true"></a>        x <span class="op">=</span> F.relu(<span class="va">self</span>.fc2(x))</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true"></a>        x <span class="op">=</span> F.log_softmax(<span class="va">self</span>.fc3(x), dim<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true"></a>        <span class="cf">return</span> x</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true"></a>model <span class="op">=</span> Network()</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true"></a><span class="bu">print</span>(model)</span></code></pre></div>
+<p>或用 <code>nn.Sequential</code>：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>    nn.Linear(<span class="dv">784</span>, <span class="dv">128</span>), nn.ReLU(),</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>    nn.Linear(<span class="dv">128</span>, <span class="dv">64</span>),  nn.ReLU(),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>    nn.Linear(<span class="dv">64</span>, <span class="dv">10</span>),   nn.LogSoftmax(dim<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>)</span></code></pre></div>
+<h3 id="自动求导-autograd">9.7 自动求导 (Autograd)</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a>x <span class="op">=</span> torch.randn(<span class="dv">2</span>, <span class="dv">2</span>, requires_grad<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a>y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>z <span class="op">=</span> y.mean()</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a>z.backward()           <span class="co"># 计算 dz/dx</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a><span class="bu">print</span>(x.grad)          <span class="co"># = x / 2  （n=4 个元素）</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a><span class="co"># 关闭梯度</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a>    y_pred <span class="op">=</span> model(images)</span></code></pre></div>
+<blockquote>
+<p>对每个被 <code>loss.backward()</code> 触发的反向 pass，所有 <code>requires_grad=True</code> 的张量的 <code>.grad</code> 累加 — 必须 <code>optimizer.zero_grad()</code>！</p>
+</blockquote>
+<h3 id="训练循环标准模板">9.8 训练循环（标准模板）</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="im">from</span> torch <span class="im">import</span> optim</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a>model     <span class="op">=</span> Network().to(device)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a>criterion <span class="op">=</span> nn.CrossEntropyLoss()          <span class="co"># 或 nn.NLLLoss() + LogSoftmax</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a>optimizer <span class="op">=</span> optim.SGD(model.parameters(), lr<span class="op">=</span><span class="fl">0.003</span>)   <span class="co"># 或 optim.Adam(...)</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(epochs):</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true"></a>    running <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true"></a>    <span class="cf">for</span> images, labels <span class="kw">in</span> trainloader:</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true"></a>        images <span class="op">=</span> images.view(images.shape[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>).to(device)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true"></a>        labels <span class="op">=</span> labels.to(device)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true"></a>        optimizer.zero_grad()              <span class="co"># 1. 清梯度</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true"></a>        logits <span class="op">=</span> model(images)             <span class="co"># 2. forward</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true"></a>        loss   <span class="op">=</span> criterion(logits, labels) <span class="co"># 3. loss</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true"></a>        loss.backward()                    <span class="co"># 4. backward</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true"></a>        optimizer.step()                   <span class="co"># 5. update</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true"></a>        running <span class="op">+=</span> loss.item()</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="ss">f&quot;epoch </span><span class="sc">{</span>epoch<span class="sc">}</span><span class="ss">: loss </span><span class="sc">{</span>running<span class="op">/</span><span class="bu">len</span>(trainloader)<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p><strong>核心 5 步</strong>： 1. <code>zero_grad()</code> 2. forward 3. compute loss 4. <code>loss.backward()</code> 5. <code>optimizer.step()</code></p>
+<h3 id="dataset-dataloader">9.9 Dataset / DataLoader</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, transforms</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a>transform <span class="op">=</span> transforms.Compose([</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a>    transforms.ToTensor(),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a>    transforms.Normalize((<span class="fl">0.5</span>,), (<span class="fl">0.5</span>,)),         <span class="co"># 标准化</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a>])</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true"></a>trainset <span class="op">=</span> datasets.MNIST(<span class="st">&quot;~/.pytorch/MNIST/&quot;</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true"></a>                          train<span class="op">=</span><span class="va">True</span>, download<span class="op">=</span><span class="va">True</span>, transform<span class="op">=</span>transform)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true"></a>trainloader <span class="op">=</span> torch.utils.data.DataLoader(trainset, batch_size<span class="op">=</span><span class="dv">64</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<ul>
+<li>一批数据形状：<code>(B, C, H, W)</code>，MNIST 为 <code>(64, 1, 28, 28)</code>。</li>
+<li>Flatten 进 fully-connected：<code>images.view(images.shape[0], -1)</code>，得 <code>(64, 784)</code>。</li>
+</ul>
+<h3 id="inference-prediction">9.10 Inference / Prediction</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a>model.<span class="bu">eval</span>()                        <span class="co"># 关闭 dropout / BN training mode</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a>    logps <span class="op">=</span> model(img.view(<span class="dv">1</span>, <span class="dv">784</span>))  <span class="co"># log-softmax 输出</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a>    ps <span class="op">=</span> torch.exp(logps)           <span class="co"># 概率</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a>    pred <span class="op">=</span> ps.argmax(dim<span class="op">=</span><span class="dv">1</span>).item()</span></code></pre></div>
+<h3 id="重要细节-易错点">9.11 重要细节 / 易错点</h3>
+<ul>
+<li><strong>Loss + 输出层一致性</strong>：
+<ul>
+<li><code>CrossEntropyLoss</code> ⇒ 模型输出 <strong>logits</strong>（不要再加 softmax）。</li>
+<li><code>NLLLoss</code> ⇒ 模型必须输出 <code>log_softmax</code>。</li>
+<li><code>BCEWithLogitsLoss</code> ⇒ 输出 logits（不加 sigmoid）。</li>
+</ul></li>
+<li>必须 <code>optimizer.zero_grad()</code> 每个 batch 开头。</li>
+<li><code>requires_grad=True</code> 才会被追踪。</li>
+<li>GPU 上张量与 CPU 张量不能直接混合 op，<code>.to(device)</code>。</li>
+<li>评估时 <code>model.eval()</code> + <code>with torch.no_grad():</code>。</li>
+</ul>
+<hr />
+<h2 id="附录-a-sklearn-pytorch-代码模板速查">附录 A — sklearn / PyTorch 代码模板速查</h2>
+<h3 id="a.1-数据切分-标准化-pipeline">A.1 数据切分 + 标准化 + Pipeline</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, KFold, cross_val_score</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> RidgeCV, LassoCV, LogisticRegression</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true"></a>X_tr, X_te, y_tr, y_te <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true"></a>cv <span class="op">=</span> KFold(n_splits<span class="op">=</span><span class="dv">10</span>, shuffle<span class="op">=</span><span class="va">True</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true"></a>pipe <span class="op">=</span> Pipeline([</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true"></a>    (<span class="st">&quot;scaler&quot;</span>, StandardScaler()),</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true"></a>    (<span class="st">&quot;model&quot;</span>,  RidgeCV(alphas<span class="op">=</span>np.logspace(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">50</span>), cv<span class="op">=</span>cv)),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true"></a>])</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true"></a>pipe.fit(X_tr, y_tr)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true"></a><span class="bu">print</span>(pipe.named_steps[<span class="st">&quot;model&quot;</span>].alpha_)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true"></a><span class="bu">print</span>(pipe.score(X_te, y_te))                    <span class="co"># R^2</span></span></code></pre></div>
+<h3 id="a.2-ridge-lasso-ols-比较">A.2 Ridge / Lasso / OLS 比较</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression, Ridge, Lasso</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>models <span class="op">=</span> {</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>    <span class="st">&quot;OLS&quot;</span>:   LinearRegression(),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a>    <span class="st">&quot;Ridge&quot;</span>: Ridge(alpha<span class="op">=</span><span class="fl">1.0</span>),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true"></a>    <span class="st">&quot;Lasso&quot;</span>: Lasso(alpha<span class="op">=</span><span class="fl">0.1</span>),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true"></a>}</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true"></a><span class="cf">for</span> name, m <span class="kw">in</span> models.items():</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true"></a>    m.fit(X_tr_s, y_tr)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true"></a>    <span class="bu">print</span>(name, mean_squared_error(y_te, m.predict(X_te_s)))</span></code></pre></div>
+<h3 id="a.3-logistic-regression-完整流程">A.3 Logistic Regression 完整流程</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> (confusion_matrix, classification_report,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true"></a>                             roc_auc_score, roc_curve)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true"></a>clf <span class="op">=</span> LogisticRegression(C<span class="op">=</span><span class="fl">1.0</span>, penalty<span class="op">=</span><span class="st">&#39;l2&#39;</span>, max_iter<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true"></a>clf.fit(X_tr, y_tr)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true"></a>y_pred  <span class="op">=</span> clf.predict(X_te)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true"></a>y_proba <span class="op">=</span> clf.predict_proba(X_te)[:, <span class="dv">1</span>]</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true"></a><span class="bu">print</span>(confusion_matrix(y_te, y_pred))</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true"></a><span class="bu">print</span>(classification_report(y_te, y_pred))</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true"></a>auc <span class="op">=</span> roc_auc_score(y_te, y_proba)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true"></a>fpr, tpr, _ <span class="op">=</span> roc_curve(y_te, y_proba)</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true"></a><span class="co"># Odds ratio for each feature</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true"></a>or_table <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true"></a>    <span class="st">&quot;feature&quot;</span>: feature_names,</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true"></a>    <span class="st">&quot;beta&quot;</span>:    clf.coef_.ravel(),</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true"></a>    <span class="st">&quot;OR&quot;</span>:      np.exp(clf.coef_.ravel()),</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true"></a>})</span></code></pre></div>
+<h3 id="a.4-pca-三种用法">A.4 PCA 三种用法</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="im">from</span> sklearn.preprocessing  <span class="im">import</span> StandardScaler</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a><span class="co"># 用累计方差比选 k</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="fl">0.95</span>).fit(StandardScaler().fit_transform(X))</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a><span class="bu">print</span>(pca.n_components_, pca.explained_variance_ratio_.cumsum())</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a><span class="co"># 固定 k</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">3</span>).fit(X_centered)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true"></a>scores <span class="op">=</span> pca.transform(X_centered)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true"></a>recon  <span class="op">=</span> pca.inverse_transform(scores)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true"></a><span class="co"># 手算（验证）</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true"></a>mu <span class="op">=</span> X.mean(<span class="dv">0</span>)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true"></a>Y  <span class="op">=</span> X <span class="op">-</span> mu</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true"></a>U, S, Vt <span class="op">=</span> np.linalg.svd(Y, full_matrices<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true"></a>scores_manual <span class="op">=</span> Y <span class="op">@</span> Vt.T[:, :<span class="dv">3</span>]</span></code></pre></div>
+<h3 id="a.5-k-means-elbow">A.5 K-Means + Elbow</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a>inertias <span class="op">=</span> []</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a>ks <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a><span class="cf">for</span> k <span class="kw">in</span> ks:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a>    inertias.append(KMeans(n_clusters<span class="op">=</span>k, n_init<span class="op">=</span><span class="dv">10</span>, random_state<span class="op">=</span><span class="dv">0</span>).fit(X).inertia_)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true"></a>plt.plot(<span class="bu">list</span>(ks), inertias, <span class="st">&#39;o-&#39;</span>)          <span class="co"># 看 elbow</span></span></code></pre></div>
+<h3 id="a.6-gmm-with-sklearn">A.6 GMM with sklearn</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a><span class="im">from</span> sklearn.mixture <span class="im">import</span> GaussianMixture</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a>gmm <span class="op">=</span> GaussianMixture(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a>    n_components<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a>    covariance_type<span class="op">=</span><span class="st">&#39;full&#39;</span>,          <span class="co"># &#39;full&#39;|&#39;tied&#39;|&#39;diag&#39;|&#39;spherical&#39;</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true"></a>    init_params<span class="op">=</span><span class="st">&#39;kmeans&#39;</span>,            <span class="co"># 用 k-means 初始化</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true"></a>    n_init<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true"></a>    random_state<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true"></a>).fit(X)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true"></a><span class="bu">print</span>(gmm.weights_, gmm.means_, gmm.covariances_)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true"></a>labels <span class="op">=</span> gmm.predict(X)              <span class="co"># hard</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true"></a>proba  <span class="op">=</span> gmm.predict_proba(X)        <span class="co"># responsibilities</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true"></a>ll     <span class="op">=</span> gmm.score(X)                <span class="co"># 平均 log-likelihood</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true"></a><span class="co"># 选 K：BIC / AIC</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true"></a>ks <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">8</span>)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true"></a>bics <span class="op">=</span> [GaussianMixture(k, random_state<span class="op">=</span><span class="dv">0</span>).fit(X).bic(X) <span class="cf">for</span> k <span class="kw">in</span> ks]</span></code></pre></div>
+<h3 id="a.7-pytorch-一锅出mnist-分类">A.7 PyTorch 一锅出（MNIST 分类）</h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a><span class="im">import</span> torch, torch.nn <span class="im">as</span> nn, torch.nn.functional <span class="im">as</span> F</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="im">from</span> torch <span class="im">import</span> optim</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a><span class="im">from</span> torchvision <span class="im">import</span> datasets, transforms</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">&quot;cpu&quot;</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true"></a>transform <span class="op">=</span> transforms.Compose([transforms.ToTensor(),</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true"></a>                                transforms.Normalize((<span class="fl">0.5</span>,), (<span class="fl">0.5</span>,))])</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true"></a>trainset    <span class="op">=</span> datasets.MNIST(<span class="st">&quot;~/.pytorch/MNIST/&quot;</span>, train<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true"></a>                              download<span class="op">=</span><span class="va">True</span>, transform<span class="op">=</span>transform)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true"></a>trainloader <span class="op">=</span> torch.utils.data.DataLoader(trainset, batch_size<span class="op">=</span><span class="dv">64</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true"></a>model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true"></a>    nn.Linear(<span class="dv">784</span>, <span class="dv">128</span>), nn.ReLU(),</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true"></a>    nn.Linear(<span class="dv">128</span>, <span class="dv">64</span>),  nn.ReLU(),</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true"></a>    nn.Linear(<span class="dv">64</span>, <span class="dv">10</span>),</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true"></a>).to(device)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true"></a>criterion <span class="op">=</span> nn.CrossEntropyLoss()</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true"></a>optimizer <span class="op">=</span> optim.Adam(model.parameters(), lr<span class="op">=</span><span class="fl">1e-3</span>)</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true"></a>    <span class="cf">for</span> x, y <span class="kw">in</span> trainloader:</span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true"></a>        x <span class="op">=</span> x.view(x.size(<span class="dv">0</span>), <span class="op">-</span><span class="dv">1</span>).to(device)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true"></a>        y <span class="op">=</span> y.to(device)</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true"></a>        optimizer.zero_grad()</span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true"></a>        loss <span class="op">=</span> criterion(model(x), y)</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true"></a>        loss.backward()</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true"></a>        optimizer.step()</span></code></pre></div>
+<hr />
+<h2 id="附录-b-期末高频考点-易错点">附录 B — 期末高频考点 &amp; 易错点</h2>
+<h3 id="b.1-概念辨析高频">B.1 概念辨析（高频）</h3>
+<ol type="1">
+<li><strong>MLE vs OLS</strong>：在高斯噪声假设下，OLS = MLE。一般情况下两者不一定等价。</li>
+<li><strong>MLE 高斯方差是有偏的</strong> (<span class="math inline">\(\hat\sigma^2_{\text{MLE}}=\frac{1}{n}\sum(\cdot)\)</span>)，无偏估计要用 <span class="math inline">\(\frac{1}{n-1}\)</span>。</li>
+<li><strong>OLS 不需要高斯假设</strong>就是 BLUE（Gauss–Markov）；<strong>置信区间/t-检验</strong> 才需要 Gaussian。</li>
+<li><strong>Ridge 不会把系数变 0；Lasso 会</strong>；Ridge 有闭式解，Lasso 没有。</li>
+<li><strong>CV 应只在 train 上做</strong>；test 只用 1 次。</li>
+<li><strong>L1 / L2 惩罚都需要预先标准化特征</strong>；intercept 不应被惩罚。</li>
+<li><strong>Logistic regression 的 NLL 是凸函数</strong>（Hessian PSD），所以局部 = 全局最优。</li>
+<li><strong>OR ≠ probability ratio</strong>（仅小概率近似）。</li>
+<li><strong>PCA 假设方差代表“信息”</strong>；要先中心化 / 标准化。</li>
+<li><strong>PCA 不是监督方法</strong>，不考虑标签；可能丢掉对预测有用但低方差的方向。</li>
+<li><strong>K-Means 假设球形等大簇</strong>；尺度敏感（要标准化）；对初始化敏感（用 k-means++）。</li>
+<li><strong>EM for GMM 单调收敛</strong>到局部最优；可用 K-Means 初始化 EM。</li>
+<li><strong>K-Means 是 GMM 的极限</strong>（<span class="math inline">\(\boldsymbol\Sigma_k = \sigma^2\mathbf I\)</span>，<span class="math inline">\(\sigma\to 0\)</span>，硬分配）。</li>
+<li><strong>CrossEntropyLoss 不要再 softmax</strong>；NLLLoss 必须配 <code>log_softmax</code>。</li>
+<li><strong>每个 batch 必须 <code>optimizer.zero_grad()</code></strong>，否则梯度累加。</li>
+</ol>
+<h3 id="b.2-公式必背清单">B.2 公式必背清单</h3>
+<ul>
+<li>一元 OLS：<span class="math inline">\(\hat\theta_1 = \dfrac{\sum(x_i-\bar x)(y_i-\bar y)}{\sum(x_i-\bar x)^2},\ \hat\theta_0 = \bar y - \hat\theta_1\bar x\)</span>。</li>
+<li>多元 OLS：<span class="math inline">\(\hat{\boldsymbol\theta} = (\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\mathbf y\)</span>。</li>
+<li>Ridge：<span class="math inline">\(\hat{\boldsymbol\theta}_\lambda = (\mathbf X^\top\mathbf X + \lambda\mathbf I)^{-1}\mathbf X^\top\mathbf y\)</span>。</li>
+<li>Lasso 正交解：<span class="math inline">\(\hat\theta_j = \operatorname{sign}(\hat\theta^{\text{OLS}}_j)(|\hat\theta^{\text{OLS}}_j|-\lambda)_+\)</span>。</li>
+<li>Hat 矩阵：<span class="math inline">\(\mathbf H = \mathbf X(\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\)</span>（对称 + 幂等）。</li>
+<li>Sigmoid 导数：<span class="math inline">\(\sigma&#39;(z) = \sigma(z)(1-\sigma(z))\)</span>。</li>
+<li>Logistic NLL 梯度：<span class="math inline">\(\nabla\ell = \tfrac{1}{n}\sum_i (\sigma(\mathbf x_i^\top\boldsymbol\beta)-y_i)\mathbf x_i\)</span>。</li>
+<li>GD 更新：<span class="math inline">\(\boldsymbol\beta\gets\boldsymbol\beta - \eta\nabla f(\boldsymbol\beta)\)</span>。</li>
+<li>PCA：<span class="math inline">\(\boldsymbol\Sigma\mathbf v_k=\lambda_k\mathbf v_k\)</span>；通过 SVD <span class="math inline">\(\mathbf Y=\mathbf U\boldsymbol\Sigma\mathbf V^\top\)</span> 得到 <span class="math inline">\(\mathbf V\)</span>。</li>
+<li>K-Means 目标：<span class="math inline">\(\sum_i \min_q\|\mathbf x_i-\mathbf c_q\|^2\)</span>。</li>
+<li>GMM responsibility：<span class="math inline">\(\gamma(z_{nk})=\dfrac{\pi_k\mathcal N(\mathbf x_n\mid\boldsymbol\mu_k,\boldsymbol\Sigma_k)}{\sum_j \pi_j\mathcal N(\mathbf x_n\mid\boldsymbol\mu_j,\boldsymbol\Sigma_j)}\)</span>。</li>
+<li>GMM M-step：<span class="math inline">\(N_k=\sum_n\gamma_{nk}\)</span>；<span class="math inline">\(\boldsymbol\mu_k=\tfrac1{N_k}\sum_n\gamma_{nk}\mathbf x_n\)</span>；<span class="math inline">\(\pi_k=N_k/N\)</span>。</li>
+</ul>
+<h3 id="b.3-易错速查">B.3 易错速查</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>错误</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ridge / Lasso 之前忘记 <code>StandardScaler</code></td>
+<td>先 fit scaler on train，再 transform train/test</td>
+</tr>
+<tr class="even">
+<td>用 test 选 hyperparameter</td>
+<td>只在 train 上做 K-fold CV</td>
+</tr>
+<tr class="odd">
+<td>Logistic 输出后再套 softmax 用 CrossEntropyLoss</td>
+<td>直接传 logits</td>
+</tr>
+<tr class="even">
+<td>忘 <code>optimizer.zero_grad()</code></td>
+<td>每个 batch 第一句</td>
+</tr>
+<tr class="odd">
+<td>高维 PCA 用特征分解 cov</td>
+<td>用 SVD</td>
+</tr>
+<tr class="even">
+<td>K-Means 没标准化</td>
+<td>先 <code>StandardScaler</code></td>
+</tr>
+<tr class="odd">
+<td>EM 初始化不好导致空簇</td>
+<td>用 K-means 结果初始化；多次 <code>n_init</code></td>
+</tr>
+<tr class="even">
+<td>把 <code>(N,1)</code> 标签喂给 <code>CrossEntropyLoss</code></td>
+<td>标签必须是 <code>(N,)</code> 整数 class index</td>
+</tr>
+<tr class="odd">
+<td>数据 leak（在 split 之前 scaler.fit 整个 X）</td>
+<td><code>fit</code> 只在 train 上</td>
+</tr>
+<tr class="even">
+<td>Ridge 的 <code>alpha</code> 与 Lasso 的 <code>alpha</code> 含义不同尺度</td>
+<td>各自独立调</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b.4-速答模板">B.4 速答模板</h3>
+<ul>
+<li>“什么是 overfitting？” → 训练误差很低但测试误差很高；模型过于复杂以至于学到了噪声；通过 regularization、CV、增加数据、early stopping 等缓解。</li>
+<li>“为什么要交叉验证？” → 单次 holdout 估计有高方差；CV 在多个折上平均，估计更稳定，并能用于模型选择。</li>
+<li>“Ridge 与 Lasso 怎么选？” → 想要稀疏 / 自动特征选择 → Lasso；想要稳定预测、特征高度相关 → Ridge；都想要 → Elastic Net。</li>
+<li>“PCA 的几何意义？” → 在最大化方差的正交方向上做投影；等价于在 column space 上找 rank-<span class="math inline">\(k\)</span> 最佳逼近（Frobenius 范数）。</li>
+<li>“K-Means 与 GMM 区别？” → K-Means 硬分配 + 球形簇；GMM 概率模型 + 软分配 + 任意椭圆形簇。</li>
+<li>“为什么神经网络要非线性激活？” → 否则任意层数等价于一层线性映射，无法逼近非线性函数。</li>
+</ul>
+<hr />
+<h2 id="学习时间分配建议">学习时间分配建议</h2>
+<table>
+<thead>
+<tr class="header">
+<th>章节</th>
+<th>建议时间</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L1 数学基础</td>
+<td>1.5h（速复习，重点 SVD / MVG 条件分布 / 矩阵求导）</td>
+</tr>
+<tr class="even">
+<td>L2 MLE</td>
+<td>1h（推一元 Bernoulli / Gaussian MLE）</td>
+</tr>
+<tr class="odd">
+<td>L3 OLS</td>
+<td>2h（推 normal equations，Hat 矩阵性质）</td>
+</tr>
+<tr class="even">
+<td>L4 Ridge/Lasso/CV</td>
+<td>3h（<strong>最重要</strong>：必能写出完整 sklearn pipeline）</td>
+</tr>
+<tr class="odd">
+<td>L5 Logistic + 分类指标</td>
+<td>2.5h（OR、ROC、混淆矩阵）</td>
+</tr>
+<tr class="even">
+<td>L6 优化</td>
+<td>1.5h（GD / SGD / mini-batch 数学+代码）</td>
+</tr>
+<tr class="odd">
+<td>L7 PCA</td>
+<td>2h（SVD-PCA 关系 + yield curve 应用）</td>
+</tr>
+<tr class="even">
+<td>L8 K-Means + GMM</td>
+<td>2.5h（EM 推导、与 K-Means 关系）</td>
+</tr>
+<tr class="odd">
+<td>L9 NN + PyTorch</td>
+<td>2.5h（训练循环模板烂熟）</td>
+</tr>
+<tr class="even">
+<td>模拟题 + 错题</td>
+<td>2h</td>
+</tr>
+<tr class="odd">
+<td><strong>合计</strong></td>
+<td><strong>~21h</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>祝考试顺利！🎯</p>
+</blockquote>
+</body>
+</html>
